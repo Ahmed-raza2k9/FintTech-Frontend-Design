@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features – Metanova Tech.</title>
+<meta name="description" content="Explore Metanova Tech's digital agency services — from custom website development and technical SEO to graphic design and UI/UX solutions.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Page Header / Hero ── */
+    .page-hero {
+      position: relative;
+      padding: 180px 0 100px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .page-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(124,58,237,0.12);
+      border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 50px;
+      padding: 6px 18px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-purple-light);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .page-hero-badge span { width:6px; height:6px; border-radius:50%; background:var(--accent-purple-light); display:inline-block; animation: pulse-dot 1.5s infinite; }
+    @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+    .page-hero h1 {
+      font-family: var(--font-headings);
+      font-size: 60px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      background: var(--text-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 24px;
+    }
+    .page-hero p {
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* ── Features Hero Grid ── */
+    .features-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 70px;
+      position: relative;
+      z-index: 10;
+    }
+    .feature-hero-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 48px 40px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-hero-card:first-child {
+      grid-row: span 2;
+      background: var(--card-highlight-gradient);
+      border-color: rgba(124,58,237,0.3);
+    }
+    .feature-hero-card:first-child::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at 20% 20%, rgba(124,58,237,0.3) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .feature-hero-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--card-border-hover);
+      box-shadow: 0 16px 48px rgba(124,58,237,0.15);
+    }
+    .feature-hero-card .card-icon-wrapper { margin-bottom: 32px; }
+    .feature-hero-card h2 {
+      font-family: var(--font-headings);
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .feature-hero-card p { color:#94a3b8; font-size:15px; line-height:1.7; }
+    .feature-tag {
+      display: inline-block;
+      margin-top: 24px;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.3);
+      color: var(--accent-purple-light);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 50px;
+    }
+    .feature-hero-card h3 {
+      font-family: var(--font-headings);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    /* ── Features Detail Grid ── */
+    .features-detail { position:relative; background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-color-alt) 100%); }
+    .features-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      position: relative;
+      z-index: 10;
+    }
+    .feature-detail-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 36px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+    }
+    .feature-detail-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--card-border-hover);
+      box-shadow: 0 12px 40px rgba(124,58,237,0.15);
+    }
+    .feature-detail-card .card-icon-wrapper { margin-bottom: 24px; }
+    .feature-detail-card h3 {
+      font-family: var(--font-headings);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .feature-detail-card p { color:#94a3b8; font-size:14px; line-height:1.7; }
+    .feature-detail-card ul {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .feature-detail-card ul li {
+      font-size: 13px;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .feature-detail-card ul li::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent-purple-light);
+      flex-shrink: 0;
+    }
+
+    /* ── Comparison table ── */
+    .comparison { position: relative; background: var(--bg-color); }
+    .comparison-table-wrap {
+      overflow-x: auto;
+      position: relative;
+      z-index: 10;
+      border-radius: 20px;
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(12px);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    thead th {
+      background: rgba(124,58,237,0.08);
+      color: #ffffff;
+      font-family: var(--font-headings);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 22px 28px;
+      text-align: left;
+    }
+    thead th:not(:first-child) { text-align: center; }
+    tbody td {
+      padding: 18px 28px;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+    tbody td:not(:first-child) { text-align: center; }
+    tbody tr:hover td { background: rgba(124,58,237,0.04); }
+    .check { color: #34d399; font-size: 18px; }
+    .cross { color: #475569; font-size: 18px; }
+    .feature-col-name { color: #e2e8f0; font-weight: 500; }
+    thead th.highlight-col { background: rgba(124,58,237,0.18); }
+    tbody td.highlight-col { background: rgba(124,58,237,0.05); color: #e2e8f0; }
+
+    /* ── Responsive ── */
+    @media (max-width: 991px) {
+      .page-hero h1 { font-size: 38px; }
+      .features-hero-grid { grid-template-columns: 1fr; }
+      .feature-hero-card:first-child { grid-row: auto; }
+      .features-detail-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 1024px) {
+      .features-detail-grid { grid-template-columns: repeat(2,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Glowing Orbs -->
+  <div class="bg-glow-container" style="position:fixed;">
+    <div class="glow-orb glow-purple" style="top:-100px;left:10%;width:600px;height:600px;"></div>
+    <div class="glow-orb glow-blue" style="top:400px;right:5%;width:500px;height:500px;"></div>
+    <div class="glow-orb glow-purple" style="top:1000px;left:-100px;width:500px;height:500px;"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo" id="header-logo">
+        Met<span>anova</span><span class="logo-dot">.</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link" id="nav-home">Home</a>
+        <a href="features.html" class="nav-link active" id="nav-features">Features</a>
+        <a href="pricing.html" class="nav-link" id="nav-pricing">Pricing</a>
+        <a href="about.html" class="nav-link" id="nav-about">About</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
+        <div class="menu-ctas-mobile">
+          <button class="btn btn-primary" id="mobile-btn-get-started">Get Started</button>
+        </div>
+      </nav>
+      <div class="header-ctas">
+        <button class="btn btn-primary" id="btn-get-started">Get Started</button>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero" id="features-hero">
+    <div class="container">
+      <div class="page-hero-badge"><span></span>Our Capabilities</div>
+      <h1>Transforming Ideas Into<br>Powerful Digital Experiences</h1>
+      <p>Metanova Tech helps businesses grow online through professional website development, SEO, social media management, graphic design, and UI/UX solutions.</p>
+    </div>
+  </section>
+
+  <!-- Features Hero Cards -->
+  <section class="section-padding" style="padding-top:0; background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-color-alt) 100%); position:relative;">
+    <div class="container">
+      <div class="features-hero-grid">
+        <!-- Big left card -->
+        <div class="feature-hero-card">
+          <div class="card-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line>
+              <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+              <line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line>
+            </svg>
+          </div>
+          <h2>Custom Web Development &amp; Programming</h2>
+          <p>We build bespoke websites, web applications, and corporate portals tailored to your exact business specifications, ensuring robust performance, speed, and scalability.</p>
+          <p style="margin-top:16px;">Using modern technologies and frameworks, our web solutions are designed with clean code, advanced security, and are optimized to grow alongside your business from day one.</p>
+          <span class="feature-tag">💻 Custom Web Dev</span>
+        </div>
+        <!-- Top right -->
+        <div class="feature-hero-card">
+          <div class="card-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3>SEO &amp; Search Optimization</h3>
+          <p>Increase your organic visibility, boost Google search rankings, and attract high-converting traffic with our comprehensive technical SEO audits and strategies.</p>
+          <span class="feature-tag">📈 Rank Optimization</span>
+        </div>
+        <!-- Bottom right -->
+        <div class="feature-hero-card">
+          <div class="card-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <h3>Social Media &amp; Content</h3>
+          <p>Build your online presence, actively engage your target audience, and foster long-term brand loyalty with professional social media management and planning.</p>
+          <span class="feature-tag">📱 Brand Engagement</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Detail Cards -->
+  <section class="features-detail section-padding" id="features-detail">
+    <div class="container">
+      <div class="section-header">
+        <h2>Built for <span>Your Success</span></h2>
+        <p>Whether you're looking for a simple business site or a fully custom e-commerce solution — we've got you covered.</p>
+      </div>
+      <div class="features-detail-grid">
+
+        <div class="feature-detail-card">
+          <div class="card-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <h3>Custom Web Development</h3>
+          <p>High-performance business sites, custom landing pages, and interactive web apps engineered with modern code.</p>
+          <ul>
+            <li>Bespoke React &amp; HTML5 frameworks</li>
+            <li>Ultra-fast page load times</li>
+            <li>Secure, scalable back-ends</li>
+          </ul>
+        </div>
+
+        <div class="feature-detail-card">
+          <div class="card-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3>Search Optimization (SEO)</h3>
+          <p>Targeted keywords, on-page content structures, and technical setup designed to boost your Google rankings.</p>
+          <ul>
+            <li>Comprehensive SEO audits</li>
+            <li>On-page meta &amp; content optimization</li>
+            <li>High-quality backlinks &amp; analytics</li>
+          </ul>
+        </div>
+
+        <div class="feature-detail-card">
+          <div class="card-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+            </svg>
+          </div>
+          <h3>Social Media Management</h3>
+          <p>Build and maintain a strong online community with custom-designed posts and growth strategies.</p>
+          <ul>
+            <li>Content calendars &amp; copy writing</li>
+            <li>Multi-channel brand campaigns</li>
+            <li>Analytics and engagement tracking</li>
+          </ul>
+        </div>
+
+        <div class="feature-detail-card">
+          <div class="card-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+          </div>
+          <h3>Graphic Design &amp; Branding</h3>
+          <p>Create a beautiful, cohesive visual identity with logos, digital marketing banners, and brand books.</p>
+          <ul>
+            <li>Professional logo &amp; asset design</li>
+            <li>Branding colors &amp; typography rules</li>
+            <li>Cohesive social media graphics</li>
+          </ul>
+        </div>
+
+        <div class="feature-detail-card">
+          <div class="card-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <h3>Modern UI/UX Design</h3>
+          <p>Beautiful layouts and user experiences that captivate visitors and optimize conversions.</p>
+          <ul>
+            <li>Figma wireframes &amp; prototypes</li>
+            <li>Intense focus on user intuition</li>
+            <li>Clean layouts &amp; micro-interactions</li>
+          </ul>
+        </div>
+
+        <div class="feature-detail-card">
+          <div class="card-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Launch &amp; Ongoing Support</h3>
+          <p>Proactive website monitoring, domain/hosting configuration, and updates whenever you need them.</p>
+          <ul>
+            <li>Hosting &amp; DNS configuration</li>
+            <li>Regular backups &amp; security checks</li>
+            <li>Proactive content &amp; feature updates</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Comparison Table -->
+  <section class="comparison section-padding" id="feature-comparison">
+    <div class="container">
+      <div class="section-header">
+        <h2>Feature <span>Comparison</span></h2>
+        <p>See exactly what's included across each plan so you can choose with confidence.</p>
+      </div>
+      <div class="comparison-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Service Details</th>
+              <th>Starter</th>
+              <th class="highlight-col">Professional</th>
+              <th>Business</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="feature-col-name">Custom Web Design</td><td><span class="check">✓</span></td><td class="highlight-col"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+            <tr><td class="feature-col-name">Pages Included</td><td>Up to 5</td><td class="highlight-col">Up to 15</td><td>Unlimited</td></tr>
+            <tr><td class="feature-col-name">SEO Optimization</td><td>Basic</td><td class="highlight-col">Advanced</td><td>Full Campaign</td></tr>
+            <tr><td class="feature-col-name">Social Media Setup</td><td><span class="cross">✗</span></td><td class="highlight-col"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+            <tr><td class="feature-col-name">Custom Graphics</td><td>2 Assets</td><td class="highlight-col">10 Assets</td><td>Unlimited</td></tr>
+            <tr><td class="feature-col-name">Contact Form &amp; Map</td><td><span class="check">✓</span></td><td class="highlight-col"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+            <tr><td class="feature-col-name">E-commerce Support</td><td><span class="cross">✗</span></td><td class="highlight-col"><span class="cross">✗</span></td><td><span class="check">✓</span></td></tr>
+            <tr><td class="feature-col-name">Dedicated Support</td><td>Email</td><td class="highlight-col">Priority</td><td>24/7 Dedicated</td></tr>
+            <tr><td class="feature-col-name">Monthly Revisions</td><td>1</td><td class="highlight-col">5</td><td>Unlimited</td></tr>
+            <tr><td class="feature-col-name">Domain &amp; Hosting Setup</td><td><span class="check">✓</span></td><td class="highlight-col"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section section-padding" id="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-box-glow-arch-outer"></div>
+        <div class="cta-box-glow-arch-inner"></div>
+        <h2>Ready to Grow Your Business Online?</h2>
+        <p>Contact us today for a free discovery call. Let's discuss your custom digital strategy.</p>
+        <a href="contact.html"><button class="btn btn-primary" id="features-cta-btn">Book Free Consultation</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <a href="index.html" class="logo" id="footer-logo">Met<span>anova</span><span class="logo-dot">.</span></a>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="X/Twitter">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col" style="margin-top:40px;">
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="features.html">Dashboard</a></li>
+            <li><a href="features.html">Analytics</a></li>
+            <li><a href="features.html">Integrations</a></li>
+            <li><a href="features.html">API Access</a></li>
+            <li><a href="features.html">Mobile App</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms Of Service</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="footer-contact-info">
+            <a href="mailto:support@metanova.com">support@metanova.com</a>
+            <span>New York, NY, USA</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">© 2025 Metanova Tech. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    mobileMenuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mobileMenuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      document.body.classList.toggle('no-scroll');
+    });
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+        mobileMenuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+      }
+    });
+  </script>
+</body>
+</html>

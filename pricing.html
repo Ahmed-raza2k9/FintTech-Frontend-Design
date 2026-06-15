@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing – Metanova Tech.</title>
+  <meta name="description" content="Affordable, transparent digital agency pricing for custom web development, SEO campaigns, and branding.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Page Hero ── */
+    .page-hero {
+      position: relative;
+      padding: 180px 0 90px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .page-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(124,58,237,0.12);
+      border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 50px;
+      padding: 6px 18px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-purple-light);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .page-hero-badge span {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent-purple-light);
+      display: inline-block;
+      animation: pulse-dot 1.5s infinite;
+    }
+    @keyframes pulse-dot {
+      0%,100%{opacity:1;transform:scale(1)}
+      50%{opacity:.4;transform:scale(.7)}
+    }
+    .page-hero h1 {
+      font-family: var(--font-headings);
+      font-size: 60px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      background: var(--text-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 24px;
+    }
+    .page-hero p {
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 560px;
+      margin: 0 auto 40px;
+    }
+
+    /* ── Billing Toggle ── */
+    .billing-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 50px;
+      padding: 6px 20px;
+      font-size: 14px;
+      color: #94a3b8;
+      position: relative;
+      z-index: 10;
+    }
+    .billing-toggle .toggle-switch {
+      width: 48px;
+      height: 26px;
+      background: var(--accent-purple);
+      border-radius: 50px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.3s;
+      flex-shrink: 0;
+    }
+    .billing-toggle .toggle-switch::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    .billing-toggle.annual .toggle-switch::after {
+      transform: translateX(22px);
+    }
+    .billing-toggle .save-badge {
+      background: rgba(52,211,153,0.15);
+      border: 1px solid rgba(52,211,153,0.3);
+      color: #34d399;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 50px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Pricing Section ── */
+    .pricing-section {
+      background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-color-alt) 100%);
+      position: relative;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: start;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ── Pricing Card ── */
+    .pricing-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 44px 36px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+      position: relative;
+      overflow: hidden;
+    }
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    }
+    .pricing-card.popular {
+      background: var(--card-highlight-gradient);
+      border-color: rgba(124,58,237,0.5);
+      box-shadow: 0 10px 40px rgba(124,58,237,0.2);
+      transform: translateY(-12px);
+    }
+    .pricing-card.popular:hover {
+      transform: translateY(-18px);
+      box-shadow: 0 24px 60px rgba(124,58,237,0.3);
+    }
+    .pricing-card.popular::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.25) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .popular-badge {
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--btn-gradient);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 20px;
+      border-radius: 0 0 14px 14px;
+      box-shadow: 0 4px 15px rgba(124,58,237,0.4);
+    }
+    .plan-name {
+      font-family: var(--font-headings);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-purple-light);
+      margin-bottom: 16px;
+    }
+    .plan-price {
+      display: flex;
+      align-items: flex-end;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+    .price-currency {
+      font-family: var(--font-headings);
+      font-size: 24px;
+      font-weight: 700;
+      color: #94a3b8;
+      line-height: 1;
+      padding-bottom: 6px;
+    }
+    .price-amount {
+      font-family: var(--font-headings);
+      font-size: 58px;
+      font-weight: 800;
+      line-height: 1;
+      color: #fff;
+      letter-spacing: -2px;
+    }
+    .price-period {
+      font-size: 14px;
+      color: #64748b;
+      padding-bottom: 10px;
+    }
+    .plan-desc {
+      font-size: 14px;
+      color: #64748b;
+      margin-bottom: 32px;
+      min-height: 40px;
+    }
+    .plan-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.06);
+      margin-bottom: 28px;
+    }
+    .plan-features {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+    .plan-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: #cbd5e1;
+    }
+    .plan-feature .feat-check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(52,211,153,0.12);
+      border: 1px solid rgba(52,211,153,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .plan-feature .feat-check svg {
+      width: 11px; height: 11px;
+      stroke: #34d399;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .plan-feature.muted { color: #475569; }
+    .plan-feature.muted .feat-check {
+      background: rgba(71,85,105,0.15);
+      border-color: rgba(71,85,105,0.3);
+    }
+    .plan-feature.muted .feat-check svg { stroke: #475569; }
+
+    .btn-plan-primary {
+      width: 100%;
+      padding: 15px;
+      font-size: 15px;
+      background: var(--btn-gradient);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-family: var(--font-headings);
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(124,58,237,0.3);
+    }
+    .btn-plan-primary:hover {
+      background: var(--btn-gradient-hover);
+      box-shadow: 0 8px 24px rgba(124,58,237,0.5);
+      transform: translateY(-1px);
+    }
+    .btn-plan-ghost {
+      width: 100%;
+      padding: 15px;
+      font-size: 15px;
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 50px;
+      font-family: var(--font-headings);
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-plan-ghost:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.3);
+    }
+
+    /* ── Logos / Trust ── */
+    .trusted-by {
+      text-align: center;
+      margin-top: 70px;
+      position: relative;
+      z-index: 10;
+    }
+    .trusted-by p {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #475569;
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+    .trusted-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .trusted-logo {
+      font-family: var(--font-headings);
+      font-size: 18px;
+      font-weight: 700;
+      color: #334155;
+      letter-spacing: -0.5px;
+      transition: color 0.3s;
+    }
+    .trusted-logo:hover { color: #64748b; }
+
+    /* ── FAQ ── */
+    .pricing-faq { background: var(--bg-color); position: relative; }
+
+    /* ── Guarantee ── */
+    .guarantee-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      background: rgba(124,58,237,0.06);
+      border: 1px solid rgba(124,58,237,0.15);
+      border-radius: 20px;
+      padding: 32px 40px;
+      margin-top: 60px;
+      position: relative;
+      z-index: 10;
+    }
+    .guarantee-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .guarantee-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(124,58,237,0.12);
+      border: 1px solid rgba(124,58,237,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-purple-light);
+      flex-shrink: 0;
+    }
+    .guarantee-icon svg { width:20px; height:20px; stroke:currentColor; fill:none; stroke-width:2; }
+    .guarantee-text strong {
+      display: block;
+      font-family: var(--font-headings);
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .guarantee-text span { font-size: 13px; color: #64748b; }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .pricing-grid { grid-template-columns: repeat(2,1fr); }
+      .pricing-card.popular { transform: none; }
+      .pricing-card.popular:hover { transform: translateY(-8px); }
+    }
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 38px; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-card.popular { transform: none; }
+      .guarantee-bar { flex-direction: column; gap: 24px; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-glow-container" style="position:fixed;">
+    <div class="glow-orb glow-purple" style="top:-100px;left:10%;width:600px;height:600px;"></div>
+    <div class="glow-orb glow-blue" style="top:500px;right:5%;width:500px;height:500px;"></div>
+    <div class="glow-orb glow-purple" style="top:1200px;left:-100px;width:500px;height:500px;"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo" id="header-logo">
+        Met<span>anova</span><span class="logo-dot">.</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link" id="nav-home">Home</a>
+        <a href="features.html" class="nav-link" id="nav-features">Features</a>
+        <a href="pricing.html" class="nav-link active" id="nav-pricing">Pricing</a>
+        <a href="about.html" class="nav-link" id="nav-about">About</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
+        <div class="menu-ctas-mobile">
+          <button class="btn btn-primary">Get Started</button>
+        </div>
+      </nav>
+      <div class="header-ctas">
+        <button class="btn btn-primary" id="btn-get-started">Get Started</button>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero" id="pricing-hero">
+    <div class="container">
+      <div class="page-hero-badge"><span></span>Simple Pricing</div>
+      <h1>Invest in Growth.<br>Not Complexity.</h1>
+      <p>Transparent digital agency pricing. Choose between one-time custom design packages or monthly retainer options.</p>
+      <!-- Billing toggle -->
+      <div class="billing-toggle" id="billing-toggle" onclick="this.classList.toggle('annual'); updatePrices();">
+        <span id="lbl-monthly" style="color:#fff;font-weight:600;">One-Time</span>
+        <div class="toggle-switch"></div>
+        <span id="lbl-annual">Monthly Retainer</span>
+        <span class="save-badge">Save 20%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Cards -->
+  <section class="pricing-section section-padding" style="padding-top:40px;" id="pricing-cards">
+    <div class="container">
+      <div class="pricing-grid">
+
+        <!-- Starter -->
+        <div class="pricing-card" id="plan-starter">
+          <div class="plan-name">Starter</div>
+          <div class="plan-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount" id="price-starter">199</span>
+            <span class="price-period" id="period-starter">/project</span>
+          </div>
+          <p class="plan-desc">Perfect for startups and small brands looking to establish a professional web presence.</p>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Up to 5 custom designed pages</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Standard SEO setup &amp; indexing</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Fully responsive (mobile-friendly)</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Standard contact forms</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Email support (24hr response)</li>
+            <li class="plan-feature muted"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>E-commerce integration</li>
+            <li class="plan-feature muted"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Dedicated phone support</li>
+            <li class="plan-feature muted"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Custom database systems</li>
+          </ul>
+          <a href="contact.html"><button class="btn-plan-ghost" id="btn-starter">Get Starter Plan</button></a>
+        </div>
+
+        <!-- Growth (Popular) -->
+        <div class="pricing-card popular" id="plan-growth">
+          <div class="popular-badge">⚡ Most Popular</div>
+          <div class="plan-name" style="margin-top:16px;">Professional</div>
+          <div class="plan-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount" id="price-growth">499</span>
+            <span class="price-period" id="period-growth">/project</span>
+          </div>
+          <p class="plan-desc">Designed for growing businesses needing advanced SEO, custom layouts, and branding.</p>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Up to 15 custom designed pages</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Advanced technical SEO campaign</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Social media setup &amp; templates</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Custom logo &amp; graphic design</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Priority email &amp; chat support</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Custom API integrations</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Proactive performance audits</li>
+            <li class="plan-feature muted"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>E-commerce storefront setup</li>
+          </ul>
+          <a href="contact.html"><button class="btn-plan-primary" id="btn-growth">Get Professional Plan</button></a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card" id="plan-enterprise">
+          <div class="plan-name">Business</div>
+          <div class="plan-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount" id="price-enterprise">999</span>
+            <span class="price-period" id="period-enterprise">/project</span>
+          </div>
+          <p class="plan-desc">Ultimate custom website design, complete SEO audit, branding, and full e-commerce.</p>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Unlimited pages &amp; blog posts</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Full e-commerce storefront setup</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Multi-channel SEO campaigns</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Unlimited graphic design assets</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Custom database &amp; CRM integration</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>24/7 dedicated priority support</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Domain &amp; hosting configuration</li>
+            <li class="plan-feature"><span class="feat-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>Proactive updates &amp; maintenance</li>
+          </ul>
+          <a href="contact.html"><button class="btn-plan-ghost" id="btn-enterprise">Get Business Plan</button></a>
+        </div>
+
+      </div>
+
+      <!-- Trust Logos -->
+      <div class="trusted-by">
+        <p>Trusted by 1,200+ companies worldwide</p>
+        <div class="trusted-logos">
+          <span class="trusted-logo">Clarity App</span>
+          <span class="trusted-logo">GrowthBase</span>
+          <span class="trusted-logo">LedgerTech</span>
+          <span class="trusted-logo">Nexus</span>
+          <span class="trusted-logo">Vault Studio</span>
+        </div>
+      </div>
+
+      <!-- Guarantees -->
+      <div class="guarantee-bar">
+        <div class="guarantee-item">
+          <div class="guarantee-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="guarantee-text">
+            <strong>30-Day Money Back</strong>
+            <span>Full refund, no questions asked</span>
+          </div>
+        </div>
+        <div class="guarantee-item">
+          <div class="guarantee-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <div class="guarantee-text">
+            <strong>100% Satisfaction</strong>
+            <span>Unlimited design revisions until you love it</span>
+          </div>
+        </div>
+        <div class="guarantee-item">
+          <div class="guarantee-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div class="guarantee-text">
+            <strong>SEO &amp; Speed Ready</strong>
+            <span>Built for speed and Google search rankings</span>
+          </div>
+        </div>
+        <div class="guarantee-item">
+          <div class="guarantee-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="guarantee-text">
+            <strong>24/7 Support</strong>
+            <span>Real humans, not bots</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing FAQ -->
+  <section class="pricing-faq section-padding" id="pricing-faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Pricing <span>FAQs</span></h2>
+        <p>Everything you need to know before committing — ask us anything.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open id="pfaq-1">
+          <summary>
+            <span><span class="faq-number">1.</span> Can I switch from one-time to a monthly retainer?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer"><p>Yes, you can transition to a monthly retainer package at any time to receive ongoing updates, priority maintenance, continuous search engine optimization (SEO), and custom graphics support.</p></div>
+        </details>
+        <details class="faq-item" id="pfaq-2">
+          <summary>
+            <span><span class="faq-number">2.</span> Do you offer discounts for startups or non-profits?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer"><p>Absolutely. We offer custom discounts of up to 25% for registered non-profit organizations, educational systems, and early-stage bootstrapped startups. Reach out to us via our contact page to discuss your case.</p></div>
+        </details>
+        <details class="faq-item" id="pfaq-3">
+          <summary>
+            <span><span class="faq-number">3.</span> How does the project payment structure work?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer"><p>For one-time website design and development projects, we work on a standard 50% upfront deposit structure and the remaining 50% upon successful final launch. Monthly retainers are billed on the 1st of every month.</p></div>
+        </details>
+        <details class="faq-item" id="pfaq-4">
+          <summary>
+            <span><span class="faq-number">4.</span> Is there a long-term commitment for monthly retainers?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer"><p>No, there are no long-term contracts. Our monthly retainers are billed on a month-to-month basis, and you are free to upgrade, downgrade, pause, or cancel your subscription at the end of any billing cycle.</p></div>
+        </details>
+        <details class="faq-item" id="pfaq-5">
+          <summary>
+            <span><span class="faq-number">5.</span> What payment methods do you accept?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer"><p>We accept all major credit and debit cards (Visa, Mastercard, American Express), bank transfers, and direct wire payments. All payments are processed securely with end-to-end encryption.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section section-padding" id="pricing-cta">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-box-glow-arch-outer"></div>
+        <div class="cta-box-glow-arch-inner"></div>
+        <h2>Ready to Transform Your Online Presence?</h2>
+        <p>Get a custom, high-converting digital platform built specifically for your brand's growth.</p>
+        <a href="contact.html"><button class="btn btn-primary" id="pricing-cta-btn" style="font-size:16px;padding:16px 40px;">Book Your Discovery Call</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <a href="index.html" class="logo">Met<span>anova</span><span class="logo-dot">.</span></a>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="X/Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col" style="margin-top:40px;">
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="#">Careers</a></li><li><a href="#">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="#">Changelog</a></li><li><a href="#">Roadmap</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul class="footer-links"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Security</a></li><li><a href="#">Cookie Policy</a></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><div class="footer-contact-info"><a href="mailto:support@metanova.com">support@metanova.com</a><span>New York, NY, USA</span></div></div>
+      </div>
+      <div class="footer-bottom"><p class="copyright">© 2025 Metanova Tech. All Rights Reserved.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const nav = document.getElementById('nav-menu');
+    toggle.addEventListener('click', e => {
+      e.stopPropagation();
+      toggle.classList.toggle('active');
+      nav.classList.toggle('active');
+      document.body.classList.toggle('no-scroll');
+    });
+    document.addEventListener('click', e => {
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+        toggle.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+      }
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('toggle', () => {
+        if (item.open) document.querySelectorAll('.faq-item').forEach(o => { if (o !== item) o.removeAttribute('open'); });
+      });
+    });
+
+    // Billing toggle + price update
+    const prices = { starter: [199,159], growth: [499,399], enterprise: [999,799] };
+    function updatePrices() {
+      const isAnnual = document.getElementById('billing-toggle').classList.contains('annual');
+      const idx = isAnnual ? 1 : 0;
+      document.getElementById('price-starter').textContent = prices.starter[idx];
+      document.getElementById('price-growth').textContent = prices.growth[idx];
+      document.getElementById('price-enterprise').textContent = prices.enterprise[idx];
+      
+      const periodText = isAnnual ? '/mo' : '/project';
+      document.getElementById('period-starter').textContent = periodText;
+      document.getElementById('period-growth').textContent = periodText;
+      document.getElementById('period-enterprise').textContent = periodText;
+
+      document.getElementById('lbl-monthly').style.color = isAnnual ? '#94a3b8' : '#fff';
+      document.getElementById('lbl-monthly').style.fontWeight = isAnnual ? '400' : '600';
+      document.getElementById('lbl-annual').style.color = isAnnual ? '#fff' : '#94a3b8';
+      document.getElementById('lbl-annual').style.fontWeight = isAnnual ? '600' : '400';
+    }
+  </script>
+</body>
+</html>
