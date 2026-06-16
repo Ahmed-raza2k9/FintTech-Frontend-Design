@@ -152,22 +152,15 @@ header .container {
 }
 
 .logo {
-  font-family: var(--font-headings);
-  font-size: 28px;
-  font-weight: 700;
-  color: #ffffff;
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 8px;
 }
 
-.logo span {
-  font-weight: 400;
-}
-
-.logo-dot {
-  color: var(--accent-purple-light);
-  display: inline-block;
+.logo img {
+  height: 70px;
+  width: auto;
+  display: block;
 }
 
 .nav-menu {
