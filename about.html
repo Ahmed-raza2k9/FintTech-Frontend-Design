@@ -5,429 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us – Metanova Tech.</title>
   <meta name="description" content="Learn about the Metanova Tech team — our mission, values, and the story behind the agency built to power digital growth.">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* ── Page Hero ── */
-    .page-hero {
-      position: relative;
-      padding: 180px 0 100px;
-      text-align: center;
-      overflow: hidden;
-    }
-    .page-hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(124,58,237,0.12);
-      border: 1px solid rgba(124,58,237,0.3);
-      border-radius: 50px;
-      padding: 6px 18px;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--accent-purple-light);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-    }
-    .page-hero-badge span {
-      width:6px;height:6px;border-radius:50%;
-      background:var(--accent-purple-light);display:inline-block;
-      animation: pulse-dot 1.5s infinite;
-    }
-    @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
-    .page-hero h1 {
-      font-family: var(--font-headings);
-      font-size: 62px;
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -1.5px;
-      background: var(--text-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 24px;
-    }
-    .page-hero p {
-      font-size: 18px;
-      color: #94a3b8;
-      max-width: 640px;
-      margin: 0 auto;
-    }
-
-    /* ── Big Stats Bar ── */
-    .about-stats-bar {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 20px;
-      overflow: hidden;
-      margin-top: 70px;
-      position: relative;
-      z-index: 10;
-    }
-    .about-stat {
-      background: var(--card-bg);
-      padding: 40px 32px;
-      text-align: center;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      transition: background 0.3s;
-    }
-    .about-stat:hover { background: rgba(124,58,237,0.07); }
-    .about-stat-num {
-      font-family: var(--font-headings);
-      font-size: 52px;
-      font-weight: 800;
-      background: var(--accent-text-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .about-stat-label {
-      font-size: 14px;
-      color: #64748b;
-      font-weight: 500;
-    }
-
-    /* ── Mission Section ── */
-    .mission-section {
-      background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-color-alt) 100%);
-      position: relative;
-    }
-    .mission-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-      position: relative;
-      z-index: 10;
-    }
-    .mission-content h2 {
-      font-family: var(--font-headings);
-      font-size: 48px;
-      font-weight: 800;
-      line-height: 1.2;
-      letter-spacing: -1.5px;
-      margin-bottom: 28px;
-    }
-    .mission-content h2 span {
-      background: var(--accent-text-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .mission-content p {
-      color: #94a3b8;
-      font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-    .mission-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 32px;
-    }
-    .mission-pill {
-      background: rgba(124,58,237,0.1);
-      border: 1px solid rgba(124,58,237,0.25);
-      color: var(--accent-purple-light);
-      font-size: 13px;
-      font-weight: 600;
-      padding: 8px 18px;
-      border-radius: 50px;
-    }
-    .mission-visual {
-      position: relative;
-    }
-    .mission-card-stack {
-      position: relative;
-      height: 420px;
-    }
-    .m-card {
-      position: absolute;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 20px;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      padding: 28px 32px;
-      transition: transform 0.4s ease;
-    }
-    .m-card:hover { transform: translateY(-4px) !important; }
-    .m-card-1 {
-      top: 0; left: 0; right: 0;
-      background: var(--card-highlight-gradient);
-      border-color: rgba(124,58,237,0.3);
-    }
-    .m-card-2 { top: 160px; left: 40px; right: -20px; z-index: 2; }
-    .m-card-3 { top: 290px; left: 0; right: 40px; z-index: 3; }
-    .m-card .card-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--accent-purple-light);
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .m-card h4 {
-      font-family: var(--font-headings);
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .m-card p { font-size: 13px; color: #64748b; }
-    .m-card .m-metric {
-      font-family: var(--font-headings);
-      font-size: 36px;
-      font-weight: 800;
-      background: var(--accent-text-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* ── Values Section ── */
-    .values-section {
-      background: var(--bg-color);
-      position: relative;
-    }
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      position: relative;
-      z-index: 10;
-    }
-    .value-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 40px 32px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-      position: relative;
-      overflow: hidden;
-    }
-    .value-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--accent-text-gradient);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .value-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--card-border-hover);
-      box-shadow: 0 16px 48px rgba(124,58,237,0.12);
-    }
-    .value-card:hover::before { opacity: 1; }
-    .value-number {
-      font-family: var(--font-headings);
-      font-size: 48px;
-      font-weight: 800;
-      color: rgba(124,58,237,0.15);
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-    .value-card h3 {
-      font-family: var(--font-headings);
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-    .value-card p { color: #94a3b8; font-size: 14px; line-height: 1.7; }
-
-    /* ── Timeline ── */
-    .timeline-section {
-      background: linear-gradient(180deg, var(--bg-color-alt) 0%, var(--bg-color) 100%);
-      position: relative;
-    }
-    .timeline {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
-      z-index: 10;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0; bottom: 0;
-      width: 1px;
-      background: linear-gradient(180deg, transparent, rgba(124,58,237,0.4) 10%, rgba(124,58,237,0.4) 90%, transparent);
-      transform: translateX(-50%);
-    }
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 1fr 60px 1fr;
-      gap: 0 24px;
-      align-items: center;
-      margin-bottom: 48px;
-    }
-    .timeline-item:last-child { margin-bottom: 0; }
-    .timeline-content {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 24px 28px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      transition: all 0.3s ease;
-    }
-    .timeline-content:hover {
-      border-color: var(--card-border-hover);
-      box-shadow: 0 8px 32px rgba(124,58,237,0.1);
-    }
-    .timeline-item:nth-child(even) .timeline-content:first-child { order: 3; }
-    .timeline-item:nth-child(even) .timeline-dot { order: 2; }
-    .timeline-item:nth-child(even) .timeline-empty { order: 1; }
-    .timeline-dot {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--card-highlight-gradient);
-      border: 2px solid rgba(124,58,237,0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      justify-self: center;
-      box-shadow: 0 0 20px rgba(124,58,237,0.3);
-      font-family: var(--font-headings);
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--accent-purple-light);
-      flex-shrink: 0;
-    }
-    .timeline-year {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--accent-purple-light);
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .timeline-content h4 {
-      font-family: var(--font-headings);
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .timeline-content p { font-size: 13px; color: #64748b; line-height: 1.6; }
-    .timeline-empty { display: block; }
-
-    /* ── Team ── */
-    .team-section {
-      background: var(--bg-color);
-      position: relative;
-    }
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      position: relative;
-      z-index: 10;
-    }
-    .team-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 36px 24px;
-      text-align: center;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-    }
-    .team-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--card-border-hover);
-      box-shadow: 0 16px 48px rgba(124,58,237,0.15);
-    }
-    .team-avatar {
-      width: 84px;
-      height: 84px;
-      border-radius: 50%;
-      margin: 0 auto 20px;
-      border: 2px solid rgba(124,58,237,0.4);
-      box-shadow: 0 0 20px rgba(124,58,237,0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-headings);
-      font-size: 24px;
-      font-weight: 700;
-      color: #fff;
-    }
-    .team-card h4 {
-      font-family: var(--font-headings);
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .team-role {
-      font-size: 12px;
-      color: var(--accent-purple-light);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 14px;
-    }
-    .team-bio { font-size: 13px; color: #64748b; line-height: 1.6; }
-    .team-socials {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 18px;
-    }
-    .team-social-btn {
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #64748b;
-      transition: all 0.3s;
-    }
-    .team-social-btn:hover {
-      background: var(--accent-purple);
-      border-color: var(--accent-purple);
-      color: #fff;
-      transform: translateY(-2px);
-    }
-    .team-social-btn svg { width:14px;height:14px;fill:currentColor; }
-
-    /* ── Responsive ── */
-    @media (max-width: 1024px) {
-      .team-grid { grid-template-columns: repeat(2,1fr); }
-      .values-grid { grid-template-columns: repeat(2,1fr); }
-      .about-stats-bar { grid-template-columns: repeat(2,1fr); }
-    }
-    @media (max-width: 991px) {
-      .page-hero h1 { font-size: 38px; }
-      .mission-grid { grid-template-columns: 1fr; gap: 40px; }
-      .mission-card-stack { height: 320px; }
-      .timeline::before { left: 24px; transform: none; }
-      .timeline-item { grid-template-columns: 60px 1fr; }
-      .timeline-dot { order: 1 !important; }
-      .timeline-content { order: 2 !important; }
-      .timeline-empty { display: none !important; }
-      .timeline-item:nth-child(even) .timeline-content { order: 2; }
-    }
-    @media (max-width: 768px) {
-      .team-grid { grid-template-columns: 1fr 1fr; }
-      .about-stats-bar { grid-template-columns: 1fr 1fr; }
-      .values-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 480px) {
-      .team-grid { grid-template-columns: 1fr; }
-      .about-stats-bar { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -443,7 +21,7 @@
     <div class="nav-container">
       <div class="nav-header">
         <a href="index.html" class="logo" id="header-logo">
-          <img src="metanova logo.webp" alt="Metanova Logo" class="logo-img">
+          <img src="assets/media/metanova logo.webp" alt="Metanova Logo" class="logo-img">
         </a>
         <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
           <i class="menu-icon">
@@ -455,38 +33,53 @@
       </div>
       <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
         <a href="index.html" class="nav-link" id="nav-home">Home</a>
-        <a href="index.html#portfolio-section" class="nav-link" id="nav-pricing">Portfolio</a>
+        <a href="services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="portfolio.html" class="nav-link" id="nav-portfolio">Portfolio</a>
         <a href="about.html" class="nav-link active" id="nav-about">About</a>
         <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
       </nav>
-      <a href="contact.html" class="nav-cta btn btn-ghost">Book Consultation</a>
+      <a href="contact.html" class="nav-cta btn btn-ghost">Get a Free Quote</a>
     </div>
   </header>
 
-  <!-- Page Hero -->
-  <section class="page-hero" id="about-hero">
+  <!-- Hero Section -->
+  <section class="hero" id="hero-section">
+    <!-- Glowing arch over Hero -->
+    <div class="hero-arch-outer"></div>
+    <div class="hero-arch-inner"></div>
+    
     <div class="container">
-      <div class="page-hero-badge"><span></span>Our Story</div>
-      <h1>Modern Digital Solutions.<br>For Modern Businesses.</h1>
-      <p>We started as a small team with a big belief — that every business deserves technology that actually works. That belief became Metanova Tech.</p>
+      <div class="hero-content">
+        <h1 class="hero-title">Our Story. <span>Our Mission.</span></h1>
+        <p class="hero-subtitle">We started as a small team with a big belief — that every business deserves technology that actually works. That belief became Metanova Tech.</p>
+      </div>
 
-      <!-- Stats bar -->
-      <div class="about-stats-bar">
-        <div class="about-stat">
-          <div class="about-stat-num">3+</div>
-          <div class="about-stat-label">Years of Expertise</div>
+      <!-- Trust Rating Bar -->
+      <div class="trust-bar" id="trust-rating-bar">
+        <div class="rating-block">
+          <div class="rating-number">3+</div>
+          <div class="rating-text">Years of Expertise</div>
         </div>
-        <div class="about-stat">
-          <div class="about-stat-num">50+</div>
-          <div class="about-stat-label">Happy Clients</div>
+        
+        <div class="divider"></div>
+        
+        <div class="rating-block">
+          <div class="rating-number">50+</div>
+          <div class="rating-text">Happy Clients</div>
         </div>
-        <div class="about-stat">
-          <div class="about-stat-num">100+</div>
-          <div class="about-stat-label">Projects delivered</div>
+        
+        <div class="divider"></div>
+        
+        <div class="rating-block">
+          <div class="rating-number">100+</div>
+          <div class="rating-text">Projects Delivered</div>
         </div>
-        <div class="about-stat">
-          <div class="about-stat-num">98%</div>
-          <div class="about-stat-label">Client Retention Rate</div>
+        
+        <div class="divider"></div>
+        
+        <div class="rating-block">
+          <div class="rating-number">98%</div>
+          <div class="rating-text">Client Retention</div>
         </div>
       </div>
     </div>
@@ -709,40 +302,83 @@
       <div class="cta-box">
         <div class="cta-box-glow-arch-outer"></div>
         <div class="cta-box-glow-arch-inner"></div>
-        <h2>Want to Join the Team?</h2>
-        <p>We're always looking for passionate builders who want to shape the future of technology. Check out our open roles or drop us a message.</p>
-        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:10;">
-          <a href="contact.html"><button class="btn btn-primary" id="about-cta-contact" style="padding:16px 36px;font-size:15px;">Get in Touch</button></a>
-          <a href="#"><button class="btn btn-ghost" id="about-cta-careers" style="padding:16px 36px;font-size:15px;">View Open Roles</button></a>
-        </div>
+        <h2>Let's Build Something Great Together</h2>
+        <p>Ready to start your project? Get in touch and let's discuss your vision.</p>
+        <a href="contact.html" class="btn btn-primary" id="about-cta-button">Get in Touch</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer Section -->
   <footer>
     <div class="container">
       <div class="footer-top">
         <a href="index.html" class="logo">
-          <img src="metanova logo.png" alt="Metanova Logo">
-      </a>
+          <img src="assets/media/metanova logo.webp" alt="Metanova Logo" class="footer-logo-img">
+        </a>
         <div class="social-links">
-          <a href="#" class="social-icon" aria-label="X/Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-          <a href="#" class="social-icon" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
-          <a href="#" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+          <!-- Twitter/X -->
+          <a href="#" class="social-icon" aria-label="X/Twitter">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a href="#" class="social-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
         </div>
       </div>
+
       <div class="footer-grid">
-        <div class="footer-col" style="margin-top:40px;"><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li><li><a href="#">Blog</a></li></ul></div>
-        <div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="#">Changelog</a></li><li><a href="#">Roadmap</a></li></ul></div>
-        <div class="footer-col"><h4>Legal</h4><ul class="footer-links"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Security</a></li></ul></div>
-        <div class="footer-col"><h4>Connect</h4><div class="footer-contact-info"><a href="mailto:support@metanova.com">support@metanova.com</a><span>New York, NY, USA</span></div></div>
+        <div class="footer-col">
+          <p class="company-description">We help businesses grow online through professional website development, SEO, social media management, graphic design, and UI/UX solutions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Our Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="footer-contact-info">
+            <a href="mailto:info@metanova-tech.com">info@metanova-tech.com</a>
+            <span>71-75 Shelton Street, London, WC2H 9JQ</span>
+          </div>
+        </div>
       </div>
-      <div class="footer-bottom"><p class="copyright">© 2025 Metanova Tech. All Rights Reserved.</p></div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2025 Metanova Tech. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

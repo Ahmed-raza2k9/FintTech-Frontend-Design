@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Metanova Tech - Transforming Ideas Into Digital Growth</title>
   <meta name="description" content="Metanova Tech helps businesses grow online through professional website development, SEO, social media management, graphic design, and UI/UX solutions.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
     <div class="nav-container">
       <div class="nav-header">
         <a href="#" class="logo" id="header-logo">
-          <img src="metanova logo.webp" alt="Metanova Logo" class="logo-img">
+          <img src="assets/media/metanova logo.webp" alt="Metanova Logo" class="logo-img">
         </a>
         <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
           <i class="menu-icon">
@@ -35,12 +35,12 @@
       </div>
       <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
         <a href="index.html" class="nav-link active" id="nav-home">Home</a>
-        <!-- <a href="features.html" class="nav-link" id="nav-features">Features</a> -->
-        <a href="index.html#portfolio-section" class="nav-link" id="nav-pricing">Portfolio</a>
+        <a href="services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="portfolio.html" class="nav-link" id="nav-portfolio">Portfolio</a>
         <a href="about.html" class="nav-link" id="nav-about">About</a>
         <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
       </nav>
-      <a href="contact.html" class="nav-cta btn btn-ghost">Book Consultation</a>
+      <a href="contact.html" class="nav-cta btn btn-ghost">Get a Free Quote</a>
     </div>
   </header>
 
@@ -112,6 +112,9 @@
           <span class="card-arrow">↗</span>
           <h3>Website Designing & Development</h3>
           <p>We design and develop modern, responsive, high-performance websites tailored to your business goals.</p>
+          <div class="service-card-overlay">
+            <a href="services.html">View Details</a>
+          </div>
         </div>
 
         <!-- Card 2 (Highlighted Gradient) -->
@@ -125,6 +128,9 @@
           <span class="card-arrow">↗</span>
           <h3>Search Engine Optimization (SEO)</h3>
           <p>Improve your visibility on Google and attract more organic traffic through data-driven SEO strategies.</p>
+          <div class="service-card-overlay">
+            <a href="services.html">View Details</a>
+          </div>
         </div>
 
         <!-- Card 3 -->
@@ -137,6 +143,9 @@
           <span class="card-arrow">↗</span>
           <h3>Social Media Management & Posting</h3>
           <p>Build a stronger online presence with professional social media content and consistent posting strategies.</p>
+          <div class="service-card-overlay">
+            <a href="services.html">View Details</a>
+          </div>
         </div>
 
         <!-- Card 4 -->
@@ -151,6 +160,9 @@
           <span class="card-arrow">↗</span>
           <h3>Graphic Designing & Branding</h3>
           <p>Create a memorable brand image with professional graphic design solutions that communicate your message.</p>
+          <div class="service-card-overlay">
+            <a href="services.html">View Details</a>
+          </div>
         </div>
 
         <!-- Card 5 -->
@@ -166,19 +178,25 @@
           <span class="card-arrow">↗</span>
           <h3>UI/UX Design</h3>
           <p>Design intuitive and visually engaging digital experiences that improve usability and customer satisfaction.</p>
+          <div class="service-card-overlay">
+            <a href="services.html">View Details</a>
+          </div>
         </div>
 
         <!-- Card 6 -->
-        <div class="service-card" id="service-content">
+        <div class="service-card" id="service-video">
           <div class="card-icon-wrapper">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              <polygon points="23 7 16 12 23 17 23 7"></polygon>
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
             </svg>
           </div>
           <span class="card-arrow">↗</span>
-          <h3>Content Writing</h3>
-          <p>Engage your audience with compelling, SEO-friendly content for websites, blogs, social media, and marketing materials.</p>
+          <h3>Video Animation</h3>
+          <p>Bring your brand to life with engaging video animations for explainer videos, social media content, and marketing campaigns.</p>
+          <div class="service-card-overlay">
+            <a href="services.html">View Details</a>
+          </div>
         </div>
       </div>
     </div>
@@ -254,7 +272,7 @@
         <button class="portfolio-tab" data-category="social-media">Social Media</button>
         <button class="portfolio-tab" data-category="graphic-design">Graphic Design</button>
         <button class="portfolio-tab" data-category="ui-ux">UI/UX</button>
-        <button class="portfolio-tab" data-category="content-writing">Content Writing</button>
+        <button class="portfolio-tab" data-category="video-animation">Video Animation</button>
       </div>
 
       <!-- Portfolio Grid -->
@@ -267,12 +285,6 @@
           <div class="portfolio-info">
             <h3>Corporate Portal</h3>
             <p>Modern business website with interactive tools.</p>
-            <a href="#project-1" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -283,12 +295,6 @@
           <div class="portfolio-info">
             <h3>E-commerce Storefront</h3>
             <p>High-converting online shop with seamless checkout.</p>
-            <a href="#project-2" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -299,12 +305,6 @@
           <div class="portfolio-info">
             <h3>Creative Portfolio</h3>
             <p>Showcase for digital creators and designers.</p>
-            <a href="#project-3" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -315,12 +315,6 @@
           <div class="portfolio-info">
             <h3>Product Landing Page</h3>
             <p>High-converting landing page for SaaS product.</p>
-            <a href="#project-4" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -331,12 +325,6 @@
           <div class="portfolio-info">
             <h3>Restaurant Website</h3>
             <p>Online menu and reservation system.</p>
-            <a href="#project-5" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -347,12 +335,6 @@
           <div class="portfolio-info">
             <h3>Agency Website</h3>
             <p>Creative agency portfolio and services page.</p>
-            <a href="#project-6" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -364,12 +346,6 @@
           <div class="portfolio-info">
             <h3>Tech Startup SEO</h3>
             <p>Increased organic traffic by 250% in 6 months.</p>
-            <a href="#project-7" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -380,12 +356,6 @@
           <div class="portfolio-info">
             <h3>E-commerce SEO</h3>
             <p>Ranked #1 for 20+ product keywords.</p>
-            <a href="#project-8" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -396,12 +366,6 @@
           <div class="portfolio-info">
             <h3>Local Business SEO</h3>
             <p>Dominated local search in 3 months.</p>
-            <a href="#project-9" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -412,12 +376,6 @@
           <div class="portfolio-info">
             <h3>Content Marketing SEO</h3>
             <p>Built a blog with 50k monthly visitors.</p>
-            <a href="#project-10" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -428,12 +386,6 @@
           <div class="portfolio-info">
             <h3>Affiliate Site SEO</h3>
             <p>Monetized content with 10k+ monthly clicks.</p>
-            <a href="#project-11" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -444,12 +396,6 @@
           <div class="portfolio-info">
             <h3>SaaS SEO</h3>
             <p>Generated 100+ qualified leads monthly.</p>
-            <a href="#project-12" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -461,12 +407,6 @@
           <div class="portfolio-info">
             <h3>Fashion Brand Campaign</h3>
             <p>Instagram growth from 1k to 50k followers.</p>
-            <a href="#project-13" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -477,12 +417,6 @@
           <div class="portfolio-info">
             <h3>Restaurant Instagram</h3>
             <p>Increased reservations by 150%.</p>
-            <a href="#project-14" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -493,12 +427,6 @@
           <div class="portfolio-info">
             <h3>E-commerce Facebook Ads</h3>
             <p>ROAS of 5.2x on ad spend.</p>
-            <a href="#project-15" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -509,12 +437,6 @@
           <div class="portfolio-info">
             <h3>Tech Startup TikTok</h3>
             <p>1M+ views in 2 weeks.</p>
-            <a href="#project-16" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -525,12 +447,6 @@
           <div class="portfolio-info">
             <h3>Personal Brand LinkedIn</h3>
             <p>100k+ impressions monthly.</p>
-            <a href="#project-17" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -541,12 +457,6 @@
           <div class="portfolio-info">
             <h3>YouTube Growth</h3>
             <p>Channel from 0 to 100k subscribers.</p>
-            <a href="#project-18" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -558,12 +468,6 @@
           <div class="portfolio-info">
             <h3>Tech Startup Branding</h3>
             <p>Full brand identity and guidelines.</p>
-            <a href="#project-19" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -574,12 +478,6 @@
           <div class="portfolio-info">
             <h3>Product Packaging</h3>
             <p>Premium packaging for food brand.</p>
-            <a href="#project-20" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -590,12 +488,6 @@
           <div class="portfolio-info">
             <h3>Event Poster Series</h3>
             <p>Creative posters for music festival.</p>
-            <a href="#project-21" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -606,12 +498,6 @@
           <div class="portfolio-info">
             <h3>Social Media Templates</h3>
             <p>Custom templates for brand consistency.</p>
-            <a href="#project-22" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -622,12 +508,6 @@
           <div class="portfolio-info">
             <h3>Logo Design Collection</h3>
             <p>50+ custom logos for various industries.</p>
-            <a href="#project-23" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -638,12 +518,6 @@
           <div class="portfolio-info">
             <h3>Brochure & Flyer Design</h3>
             <p>Print materials for marketing campaigns.</p>
-            <a href="#project-24" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -655,12 +529,6 @@
           <div class="portfolio-info">
             <h3>Fitness App Design</h3>
             <p>iOS & Android app UI with smooth UX.</p>
-            <a href="#project-25" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -671,12 +539,6 @@
           <div class="portfolio-info">
             <h3>SaaS Dashboard UI</h3>
             <p>Data visualization dashboard design.</p>
-            <a href="#project-26" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -687,12 +549,6 @@
           <div class="portfolio-info">
             <h3>E-commerce Checkout UX</h3>
             <p>Reduced cart abandonment by 35%.</p>
-            <a href="#project-27" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -703,12 +559,6 @@
           <div class="portfolio-info">
             <h3>Food Delivery App</h3>
             <p>Complete app design with wireframes.</p>
-            <a href="#project-28" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -719,12 +569,6 @@
           <div class="portfolio-info">
             <h3>Design System</h3>
             <p>Comprehensive component library.</p>
-            <a href="#project-29" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -735,111 +579,72 @@
           <div class="portfolio-info">
             <h3>Project Management Tool</h3>
             <p>Collaboration platform UI/UX.</p>
-            <a href="#project-30" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
         </div>
 
-        <!-- Content Writing Projects -->
-        <div class="portfolio-item" data-category="content-writing">
+        <!-- Video Animation Projects -->
+        <div class="portfolio-item" data-category="video-animation">
           <div class="portfolio-image">
-            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop" alt="Blog Writing">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop" alt="Explainer Video">
           </div>
           <div class="portfolio-info">
-            <h3>Tech Blog Content</h3>
-            <p>50+ SEO-optimized articles.</p>
-            <a href="#project-31" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
+            <h3>Brand Explainer Video</h3>
+            <p>2-minute animated explainer for SaaS startup.</p>
           </div>
         </div>
 
-        <div class="portfolio-item" data-category="content-writing">
+        <div class="portfolio-item" data-category="video-animation">
           <div class="portfolio-image">
-            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop" alt="Copywriting">
+            <img src="https://images.unsplash.com/photo-1536240478700-9c66fa8c34c?w=600&h=400&fit=crop" alt="Social Media Reel">
           </div>
           <div class="portfolio-info">
-            <h3>Website Copywriting</h3>
-            <p>Complete website content for 10+ brands.</p>
-            <a href="#project-32" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
+            <h3>Social Media Reels</h3>
+            <p>Short-form animated content for Instagram.</p>
           </div>
         </div>
 
-        <div class="portfolio-item" data-category="content-writing">
+        <div class="portfolio-item" data-category="video-animation">
           <div class="portfolio-image">
-            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop" alt="Email Marketing">
+            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop" alt="Product Demo">
           </div>
           <div class="portfolio-info">
-            <h3>Email Marketing Campaigns</h3>
-            <p>Open rate increased to 45%.</p>
-            <a href="#project-33" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
+            <h3>Product Demo Video</h3>
+            <p>Animated product showcase for e-commerce.</p>
           </div>
         </div>
 
-        <div class="portfolio-item" data-category="content-writing">
+        <div class="portfolio-item" data-category="video-animation">
           <div class="portfolio-image">
-            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=400&fit=crop" alt="Product Descriptions">
+            <img src="https://images.unsplash.com/photo-1492691527719-0d5f80c9ae55?w=600&h=400&fit=crop" alt="Logo Animation">
           </div>
           <div class="portfolio-info">
-            <h3>E-commerce Product Descriptions</h3>
-            <p>200+ compelling product listings.</p>
-            <a href="#project-34" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
+            <h3>Logo Animation</h3>
+            <p>Animated logo reveal for brand.</p>
           </div>
         </div>
 
-        <div class="portfolio-item" data-category="content-writing">
+        <div class="portfolio-item" data-category="video-animation">
           <div class="portfolio-image">
-            <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" alt="Social Media Content">
+            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&h=400&fit=crop" alt="Motion Graphics">
           </div>
           <div class="portfolio-info">
-            <h3>Social Media Content</h3>
-            <p>Engaging captions and posts for brands.</p>
-            <a href="#project-35" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
+            <h3>Motion Graphics</h3>
+            <p>Animated infographics and visuals.</p>
           </div>
         </div>
 
-        <div class="portfolio-item" data-category="content-writing">
+        <div class="portfolio-item" data-category="video-animation">
           <div class="portfolio-image">
             <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop" alt="Case Studies">
           </div>
           <div class="portfolio-info">
-            <h3>Case Studies & Whitepapers</h3>
-            <p>Lead magnets and in-depth content.</p>
-            <a href="#project-36" class="portfolio-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
+            <h3>Case Study Animation</h3>
+            <p>Animated case study video.</p>
           </div>
         </div>
+      </div>
+      <div class="portfolio-view-more" style="text-align: center; margin-top: 40px;">
+        <a href="portfolio.html" class="btn btn-primary">View More Projects</a>
       </div>
     </div>
   </section>
@@ -1065,9 +870,8 @@
   <footer>
     <div class="container">
       <div class="footer-top">
-        <a href="#" class="footer-logo" id="footer-logo">
-                    <img src="metanova logo.png" alt="Metanova Logo">
-                    <p>Metanova Tech</p>
+        <a href="index.html" class="logo">
+          <img src="assets/media/metanova logo.webp" alt="Metanova Logo" class="footer-logo-img">
         </a>
         <div class="social-links">
           <!-- Twitter/X -->
@@ -1098,59 +902,30 @@
       </div>
 
       <div class="footer-grid">
-        <!-- Col 1 -->
-        <div class="footer-col" style="margin-top: 40px;">
-          <ul class="footer-links">
-            <li><a href="index.html" id="foot-link-home">Home</a></li>
-            <li><a href="features.html" id="foot-link-features">Features</a></li>
-            <li><a href="pricing.html" id="foot-link-pricing">Pricing</a></li>
-            <li><a href="about.html" id="foot-link-about">About</a></li>
-            <li><a href="contact.html" id="foot-link-contact-nav">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 2 -->
         <div class="footer-col">
-          <h4>Company</h4>
-          <ul class="footer-links">
-            <li><a href="#" id="foot-link-aboutus">About Us</a></li>
-            <li><a href="#" id="foot-link-careers">Careers</a></li>
-            <li><a href="#" id="foot-link-press">Press</a></li>
-            <li><a href="#" id="foot-link-blog">Blog</a></li>
-            <li><a href="contact.html" id="foot-link-contact">Contact</a></li>
-          </ul>
+          <p class="company-description">We help businesses grow online through professional website development, SEO, social media management, graphic design, and UI/UX solutions.</p>
         </div>
-
-        <!-- Col 3 -->
         <div class="footer-col">
-          <h4>Products</h4>
+          <h4>Navigation</h4>
           <ul class="footer-links">
-            <li><a href="#" id="foot-link-dash">Dashboard</a></li>
-            <li><a href="#" id="foot-link-analytics">Analytics</a></li>
-            <li><a href="#" id="foot-link-integrations">Integrations</a></li>
-            <li><a href="#" id="foot-link-api">API Access</a></li>
-            <li><a href="#" id="foot-link-mobile">Mobile App</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-
-        <!-- Col 4 -->
         <div class="footer-col">
-          <h4>Resources</h4>
+          <h4>Services</h4>
           <ul class="footer-links">
-            <li><a href="#" id="foot-link-help">Help Center</a></li>
-            <li><a href="#" id="foot-link-faqs">FAQs</a></li>
-            <li><a href="#" id="foot-link-privacy">Privacy Policy</a></li>
-            <li><a href="#" id="foot-link-tos">Terms Of Service</a></li>
-            <li><a href="#" id="foot-link-security">Security</a></li>
+            <li><a href="services.html">Our Services</a></li>
           </ul>
         </div>
-
-        <!-- Col 5 -->
         <div class="footer-col">
           <h4>Connect</h4>
           <div class="footer-contact-info">
-            <a href="mailto:support@metanova.com" id="foot-link-email">support@metanova.com</a>
-            <span>New York, NY, USA</span>
+            <a href="mailto:info@metanova-tech.com">info@metanova-tech.com</a>
+            <span>71-75 Shelton Street, London, WC2H 9JQ</span>
           </div>
         </div>
       </div>
@@ -1161,6 +936,15 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <img src="" alt="" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

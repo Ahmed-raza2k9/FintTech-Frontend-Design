@@ -1,0 +1,154 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navContainer = document.querySelector('.nav-container');
+
+  // Toggle Mobile Menu
+  if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mobileMenuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      navContainer.classList.toggle('nav-active');
+      document.body.classList.toggle('no-scroll');
+    });
+
+    // Close Menu when clicking a Nav Link
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        navContainer.classList.remove('nav-active');
+        document.body.classList.remove('no-scroll');
+
+        // Toggle active link visual class
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+
+    // Close Menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navContainer.contains(e.target)) {
+        mobileMenuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        navContainer.classList.remove('nav-active');
+        document.body.classList.remove('no-scroll');
+      }
+    });
+  }
+
+  // FAQ Accordion - Close others when one is opened
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    item.addEventListener('toggle', () => {
+      if (item.open) {
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.removeAttribute('open');
+          }
+        });
+      }
+    });
+  });
+
+  // Portfolio Tabs - only run if we have tabs on this page
+  const portfolioTabs = document.querySelectorAll('.portfolio-tab');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+  if (portfolioTabs.length > 0 && portfolioItems.length > 0) {
+    portfolioTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs
+        portfolioTabs.forEach(t => t.classList.remove('active'));
+        // Add active class to clicked tab
+        tab.classList.add('active');
+
+        const category = tab.dataset.category;
+        let counter = 0;
+        const limit = category === 'all' ? 8 : 3;
+
+        portfolioItems.forEach(item => {
+          item.classList.add('hidden');
+          if (category === 'all') {
+            if (counter < limit) {
+              item.classList.remove('hidden');
+              counter++;
+            }
+          } else {
+            if (item.dataset.category === category) {
+              if (counter < limit) {
+                item.classList.remove('hidden');
+                counter++;
+              }
+            }
+          }
+        });
+      });
+    });
+
+    // Initialize: show first 8 projects in "all"
+    const initialCategory = 'all';
+    let initialCounter = 0;
+    const initialLimit = 8;
+    portfolioItems.forEach(item => {
+      item.classList.add('hidden');
+      if (initialCounter < initialLimit) {
+        item.classList.remove('hidden');
+        initialCounter++;
+      }
+    });
+  }
+
+  // Lightbox functionality
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  if (lightbox && lightboxImg && lightboxCaption && lightboxClose) {
+    // Add click listeners to all portfolio items
+    portfolioItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('.portfolio-image img');
+        const title = item.querySelector('.portfolio-info h3');
+        const description = item.querySelector('.portfolio-info p');
+        
+        if (img) {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          
+          let captionText = '';
+          if (title) captionText += title.textContent;
+          if (description) captionText += captionText ? ' - ' + description.textContent : description.textContent;
+          lightboxCaption.textContent = captionText;
+          
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    // Close lightbox
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+});
