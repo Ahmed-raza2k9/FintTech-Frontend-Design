@@ -19,29 +19,28 @@
   </div>
 
   <!-- Header Section -->
-  <header>
-    <div class="container">
-      <a href="#" class="logo" id="header-logo">
-          <img src="metanova logo.png" alt="Metanova Logo">
-      </a>
+  <header class="header">
+    <div class="nav-container">
+      <div class="nav-header">
+        <a href="#" class="logo" id="header-logo">
+          <img src="metanova logo.webp" alt="Metanova Logo" class="logo-img">
+        </a>
+        <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <i class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </i>
+        </button>
+      </div>
       <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
         <a href="index.html" class="nav-link active" id="nav-home">Home</a>
-        <a href="features.html" class="nav-link" id="nav-features">Features</a>
-        <a href="pricing.html" class="nav-link" id="nav-pricing">Pricing</a>
+        <!-- <a href="features.html" class="nav-link" id="nav-features">Features</a> -->
+        <a href="index.html#portfolio-section" class="nav-link" id="nav-pricing">Portfolio</a>
         <a href="about.html" class="nav-link" id="nav-about">About</a>
         <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
-        <div class="menu-ctas-mobile">
-          <button class="btn btn-primary" id="mobile-btn-get-started">Get Started</button>
-        </div>
       </nav>
-      <div class="header-ctas">
-        <button class="btn btn-primary" id="btn-get-started">Get Started</button>
-      </div>
-      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <a href="contact.html" class="nav-cta btn btn-ghost">Book Consultation</a>
     </div>
   </header>
 
@@ -56,8 +55,8 @@
         <h1 class="hero-title">Transforming Ideas Into<br>Powerful Digital Experiences</h1>
         <p class="hero-subtitle">Metanova Tech helps businesses grow online through professional website development, SEO, social media management, graphic design, and UI/UX solutions.</p>
         <div class="hero-ctas">
-          <button class="btn btn-primary" id="hero-cta-consult">Get Free Consultation</button>
-          <button class="btn btn-ghost" id="hero-cta-work">View Our Services</button>
+          <a href="contact.html" class="btn btn-primary" id="hero-cta-consult">Get Free Consultation</a>
+          <a href="index.html#services-section" class="btn btn-ghost" id="hero-cta-work">View Our Services</a>
         </div>
       </div>
 
@@ -78,7 +77,7 @@
         <div class="divider"></div>
         
         <div class="rating-block">
-          <div class="rating-number">95%</div>
+          <div class="rating-number">98%</div>
           <div class="rating-text">Client Satisfaction</div>
         </div>
         
@@ -116,7 +115,7 @@
         </div>
 
         <!-- Card 2 (Highlighted Gradient) -->
-        <div class="service-card highlighted" id="service-seo">
+        <div class="service-card" id="service-seo">
           <div class="card-icon-wrapper">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
@@ -168,6 +167,19 @@
           <h3>UI/UX Design</h3>
           <p>Design intuitive and visually engaging digital experiences that improve usability and customer satisfaction.</p>
         </div>
+
+        <!-- Card 6 -->
+        <div class="service-card" id="service-content">
+          <div class="card-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+          </div>
+          <span class="card-arrow">↗</span>
+          <h3>Content Writing</h3>
+          <p>Engage your audience with compelling, SEO-friendly content for websites, blogs, social media, and marketing materials.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -184,87 +196,650 @@
         <!-- Feature 1 -->
         <div class="stat-card" id="feature-custom">
           <div class="stat-number">01</div>
-          <span class="stat-arrow">↗</span>
           <div class="stat-label">Custom Solutions<br>Tailored to You</div>
+          <p class="stat-description">We don't use templates. Every solution is built from scratch to perfectly match your business goals and brand identity.</p>
         </div>
 
         <!-- Feature 2 -->
         <div class="stat-card" id="feature-design">
           <div class="stat-number">02</div>
-          <span class="stat-arrow">↗</span>
           <div class="stat-label">Modern Design<br>That Elevates</div>
+          <p class="stat-description">Stunning, contemporary designs that make your brand stand out and leave a lasting impression on your audience.</p>
         </div>
 
         <!-- Feature 3 -->
         <div class="stat-card" id="feature-seo">
           <div class="stat-number">03</div>
-          <span class="stat-arrow">↗</span>
           <div class="stat-label">SEO Focused<br>For Growth</div>
+          <p class="stat-description">Every project is optimized from day one to rank well on search engines and drive organic traffic to your business.</p>
         </div>
 
         <!-- Feature 4 -->
         <div class="stat-card" id="feature-responsive">
           <div class="stat-number">04</div>
-          <span class="stat-arrow">↗</span>
           <div class="stat-label">Responsive<br>Experience</div>
+          <p class="stat-description">Flawless experience on every device — desktop, tablet, and mobile — ensuring no visitor is left behind.</p>
         </div>
 
         <!-- Feature 5 -->
         <div class="stat-card" id="feature-fast">
           <div class="stat-number">05</div>
-          <span class="stat-arrow">↗</span>
           <div class="stat-label">Fast Delivery<br>On Time</div>
+          <p class="stat-description">We respect your deadlines and deliver high-quality work within the agreed timeline, every single time.</p>
         </div>
 
         <!-- Feature 6 -->
         <div class="stat-card" id="feature-support">
           <div class="stat-number">06</div>
-          <span class="stat-arrow">↗</span>
           <div class="stat-label">Ongoing Support<br>Always Here</div>
+          <p class="stat-description">Our relationship doesn't end at launch. We provide continuous support to help your business thrive long-term.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects / Case Studies Section -->
-  <section class="projects section-padding" id="projects-section">
+  <!-- Portfolio Section -->
+  <section class="portfolio section-padding" id="portfolio-section">
     <div class="container">
       <div class="section-header">
-        <h2>Real Impact. <span>Proven Results.</span></h2>
-        <p>Explore how we've helped startups and enterprises alike scale and innovate.</p>
+        <h2>Our Portfolio. <span>Real Work.</span></h2>
+        <p>Explore our projects across different categories.</p>
       </div>
 
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card" id="project-fintech">
-          <div>
-            <span class="project-tag fintech">Corporate</span>
+      <!-- Portfolio Tabs -->
+      <div class="portfolio-tabs">
+        <button class="portfolio-tab active" data-category="all">All</button>
+        <button class="portfolio-tab" data-category="website-design">Website Design</button>
+        <button class="portfolio-tab" data-category="seo">SEO</button>
+        <button class="portfolio-tab" data-category="social-media">Social Media</button>
+        <button class="portfolio-tab" data-category="graphic-design">Graphic Design</button>
+        <button class="portfolio-tab" data-category="ui-ux">UI/UX</button>
+        <button class="portfolio-tab" data-category="content-writing">Content Writing</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid">
+        <!-- All/Website Design Projects -->
+        <div class="portfolio-item" data-category="website-design">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Corporate Portal">
+          </div>
+          <div class="portfolio-info">
             <h3>Corporate Portal</h3>
+            <p>Modern business website with interactive tools.</p>
+            <a href="#project-1" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
           </div>
-          <p>Custom business website with interactive customer tools and seamless back-end integration.</p>
         </div>
 
-        <!-- Project 2 -->
-        <div class="project-card" id="project-ecommerce">
-          <div>
-            <span class="project-tag ecommerce">E-Commerce</span>
+        <div class="portfolio-item" data-category="website-design">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="E-commerce Store">
+          </div>
+          <div class="portfolio-info">
             <h3>E-commerce Storefront</h3>
+            <p>High-converting online shop with seamless checkout.</p>
+            <a href="#project-2" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
           </div>
-          <p>A fully optimized, high-converting digital storefront built for rapid scaling and sales growth.</p>
         </div>
 
-        <!-- Project 3 -->
-        <div class="project-card" id="project-ai">
-          <div>
-            <span class="project-tag ai">Personal Brand</span>
+        <div class="portfolio-item" data-category="website-design">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop" alt="Creative Portfolio">
+          </div>
+          <div class="portfolio-info">
             <h3>Creative Portfolio</h3>
+            <p>Showcase for digital creators and designers.</p>
+            <a href="#project-3" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
           </div>
-          <p>A highly responsive, custom-designed portfolio showcase for personal branding and digital creators.</p>
         </div>
-      </div>
 
-      <div class="projects-cta">
-        <button class="btn btn-primary" id="btn-view-projects">View All Projects</button>
+        <div class="portfolio-item" data-category="website-design">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop" alt="Landing Page">
+          </div>
+          <div class="portfolio-info">
+            <h3>Product Landing Page</h3>
+            <p>High-converting landing page for SaaS product.</p>
+            <a href="#project-4" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="website-design">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop" alt="Restaurant Website">
+          </div>
+          <div class="portfolio-info">
+            <h3>Restaurant Website</h3>
+            <p>Online menu and reservation system.</p>
+            <a href="#project-5" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="website-design">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&h=400&fit=crop" alt="Agency Website">
+          </div>
+          <div class="portfolio-info">
+            <h3>Agency Website</h3>
+            <p>Creative agency portfolio and services page.</p>
+            <a href="#project-6" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- SEO Projects -->
+        <div class="portfolio-item" data-category="seo">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="SEO Client 1">
+          </div>
+          <div class="portfolio-info">
+            <h3>Tech Startup SEO</h3>
+            <p>Increased organic traffic by 250% in 6 months.</p>
+            <a href="#project-7" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="seo">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c273?w=600&h=400&fit=crop" alt="SEO Client 2">
+          </div>
+          <div class="portfolio-info">
+            <h3>E-commerce SEO</h3>
+            <p>Ranked #1 for 20+ product keywords.</p>
+            <a href="#project-8" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="seo">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop" alt="SEO Client 3">
+          </div>
+          <div class="portfolio-info">
+            <h3>Local Business SEO</h3>
+            <p>Dominated local search in 3 months.</p>
+            <a href="#project-9" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="seo">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop" alt="SEO Client 4">
+          </div>
+          <div class="portfolio-info">
+            <h3>Content Marketing SEO</h3>
+            <p>Built a blog with 50k monthly visitors.</p>
+            <a href="#project-10" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="seo">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop" alt="SEO Client 5">
+          </div>
+          <div class="portfolio-info">
+            <h3>Affiliate Site SEO</h3>
+            <p>Monetized content with 10k+ monthly clicks.</p>
+            <a href="#project-11" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="seo">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=400&fit=crop" alt="SEO Client 6">
+          </div>
+          <div class="portfolio-info">
+            <h3>SaaS SEO</h3>
+            <p>Generated 100+ qualified leads monthly.</p>
+            <a href="#project-12" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Social Media Projects -->
+        <div class="portfolio-item" data-category="social-media">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" alt="Social Media Campaign 1">
+          </div>
+          <div class="portfolio-info">
+            <h3>Fashion Brand Campaign</h3>
+            <p>Instagram growth from 1k to 50k followers.</p>
+            <a href="#project-13" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="social-media">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=600&h=400&fit=crop" alt="Social Media Campaign 2">
+          </div>
+          <div class="portfolio-info">
+            <h3>Restaurant Instagram</h3>
+            <p>Increased reservations by 150%.</p>
+            <a href="#project-14" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="social-media">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" alt="Social Media Campaign 3">
+          </div>
+          <div class="portfolio-info">
+            <h3>E-commerce Facebook Ads</h3>
+            <p>ROAS of 5.2x on ad spend.</p>
+            <a href="#project-15" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="social-media">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600&h=400&fit=crop" alt="Social Media Campaign 4">
+          </div>
+          <div class="portfolio-info">
+            <h3>Tech Startup TikTok</h3>
+            <p>1M+ views in 2 weeks.</p>
+            <a href="#project-16" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="social-media">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" alt="Social Media Campaign 5">
+          </div>
+          <div class="portfolio-info">
+            <h3>Personal Brand LinkedIn</h3>
+            <p>100k+ impressions monthly.</p>
+            <a href="#project-17" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="social-media">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1472457897821-70d3819a0e24?w=600&h=400&fit=crop" alt="Social Media Campaign 6">
+          </div>
+          <div class="portfolio-info">
+            <h3>YouTube Growth</h3>
+            <p>Channel from 0 to 100k subscribers.</p>
+            <a href="#project-18" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Graphic Design Projects -->
+        <div class="portfolio-item" data-category="graphic-design">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop" alt="Brand Identity 1">
+          </div>
+          <div class="portfolio-info">
+            <h3>Tech Startup Branding</h3>
+            <p>Full brand identity and guidelines.</p>
+            <a href="#project-19" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="graphic-design">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1493421419110-74f4e85ba126?w=600&h=400&fit=crop" alt="Packaging Design">
+          </div>
+          <div class="portfolio-info">
+            <h3>Product Packaging</h3>
+            <p>Premium packaging for food brand.</p>
+            <a href="#project-20" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="graphic-design">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=600&h=400&fit=crop" alt="Poster Design">
+          </div>
+          <div class="portfolio-info">
+            <h3>Event Poster Series</h3>
+            <p>Creative posters for music festival.</p>
+            <a href="#project-21" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="graphic-design">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop" alt="Social Media Graphics">
+          </div>
+          <div class="portfolio-info">
+            <h3>Social Media Templates</h3>
+            <p>Custom templates for brand consistency.</p>
+            <a href="#project-22" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="graphic-design">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&h=400&fit=crop" alt="Logo Design">
+          </div>
+          <div class="portfolio-info">
+            <h3>Logo Design Collection</h3>
+            <p>50+ custom logos for various industries.</p>
+            <a href="#project-23" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="graphic-design">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&h=400&fit=crop" alt="Print Design">
+          </div>
+          <div class="portfolio-info">
+            <h3>Brochure & Flyer Design</h3>
+            <p>Print materials for marketing campaigns.</p>
+            <a href="#project-24" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- UI/UX Projects -->
+        <div class="portfolio-item" data-category="ui-ux">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" alt="Mobile App Design">
+          </div>
+          <div class="portfolio-info">
+            <h3>Fitness App Design</h3>
+            <p>iOS & Android app UI with smooth UX.</p>
+            <a href="#project-25" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="ui-ux">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Dashboard Design">
+          </div>
+          <div class="portfolio-info">
+            <h3>SaaS Dashboard UI</h3>
+            <p>Data visualization dashboard design.</p>
+            <a href="#project-26" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="ui-ux">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=600&h=400&fit=crop" alt="E-commerce UX">
+          </div>
+          <div class="portfolio-info">
+            <h3>E-commerce Checkout UX</h3>
+            <p>Reduced cart abandonment by 35%.</p>
+            <a href="#project-27" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="ui-ux">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop" alt="Mobile App 2">
+          </div>
+          <div class="portfolio-info">
+            <h3>Food Delivery App</h3>
+            <p>Complete app design with wireframes.</p>
+            <a href="#project-28" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="ui-ux">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop" alt="Design System">
+          </div>
+          <div class="portfolio-info">
+            <h3>Design System</h3>
+            <p>Comprehensive component library.</p>
+            <a href="#project-29" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="ui-ux">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Web App UX">
+          </div>
+          <div class="portfolio-info">
+            <h3>Project Management Tool</h3>
+            <p>Collaboration platform UI/UX.</p>
+            <a href="#project-30" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Content Writing Projects -->
+        <div class="portfolio-item" data-category="content-writing">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop" alt="Blog Writing">
+          </div>
+          <div class="portfolio-info">
+            <h3>Tech Blog Content</h3>
+            <p>50+ SEO-optimized articles.</p>
+            <a href="#project-31" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="content-writing">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop" alt="Copywriting">
+          </div>
+          <div class="portfolio-info">
+            <h3>Website Copywriting</h3>
+            <p>Complete website content for 10+ brands.</p>
+            <a href="#project-32" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="content-writing">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop" alt="Email Marketing">
+          </div>
+          <div class="portfolio-info">
+            <h3>Email Marketing Campaigns</h3>
+            <p>Open rate increased to 45%.</p>
+            <a href="#project-33" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="content-writing">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=400&fit=crop" alt="Product Descriptions">
+          </div>
+          <div class="portfolio-info">
+            <h3>E-commerce Product Descriptions</h3>
+            <p>200+ compelling product listings.</p>
+            <a href="#project-34" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="content-writing">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" alt="Social Media Content">
+          </div>
+          <div class="portfolio-info">
+            <h3>Social Media Content</h3>
+            <p>Engaging captions and posts for brands.</p>
+            <a href="#project-35" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="content-writing">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop" alt="Case Studies">
+          </div>
+          <div class="portfolio-info">
+            <h3>Case Studies & Whitepapers</h3>
+            <p>Lead magnets and in-depth content.</p>
+            <a href="#project-36" class="portfolio-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -280,92 +855,114 @@
     <!-- Infinite Scrolling Track -->
     <div class="marquee-container" dir="ltr">
       <div class="marquee-track">
-        <!-- Testimonial 1 -->
+        <!-- Testimonial 1 - Website Development -->
         <div class="testimonial-card">
-          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #a78bfa, #6d28d9);">SN</div>
+          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #a78bfa, #6d28d9);">AK</div>
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"From wireframes to launch, the process was seamless. Their team brought our custom web solution to life and our clients love the clean, intuitive interface."</p>
+          <p class="testimonial-text">"MetaNova Tech built our corporate website from scratch. The design is professional, and the site loads incredibly fast. We've seen a 25% increase in online inquiries since launch."</p>
           <div class="testimonial-author">
-            <span class="author-name">Sophia Nguyen</span>
-            <span class="author-title">Founder of Clarity App</span>
+            <span class="author-name">Amit Kapoor</span>
+            <span class="author-title">Managing Director at Apex Solutions</span>
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
+        <!-- Testimonial 2 - SEO -->
         <div class="testimonial-card">
-          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #60a5fa, #2563eb);">ER</div>
+          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #60a5fa, #2563eb);">SM</div>
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"The website they delivered exceeded our expectations: fast, responsive, and beautifully designed. It's become our primary tool for daily marketing and client acquisition."</p>
+          <p class="testimonial-text">"We worked with MetaNova on SEO for our e-commerce store. Within three months, we moved from page 3 to the first page of Google for our main keywords, and organic sales are up 40%."</p>
           <div class="testimonial-author">
-            <span class="author-name">Emily R.</span>
-            <span class="author-title">Product Manager at GrowthBase</span>
+            <span class="author-name">Sarah Mitchell</span>
+            <span class="author-title">Owner of GreenLeaf Organics</span>
           </div>
         </div>
 
-        <!-- Testimonial 3 -->
+        <!-- Testimonial 3 - Social Media Management -->
         <div class="testimonial-card">
-          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f472b6, #db2777);">RM</div>
+          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f472b6, #db2777);">DP</div>
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"We needed a partner who understood both design and performance. They nailed it. Our site's speed optimization and UI clarity have dramatically improved our conversion rates."</p>
+          <p class="testimonial-text">"Their social media team transformed our Instagram presence. Consistent, high-quality content increased our follower count by 1,200 in six months and boosted in-store visits."</p>
           <div class="testimonial-author">
-            <span class="author-name">Raj Malhotra</span>
-            <span class="author-title">CTO at LedgerTech</span>
+            <span class="author-name">David Park</span>
+            <span class="author-title">Founder of Urban Brew Café</span>
           </div>
         </div>
 
-        <!-- Testimonial 4 -->
+        <!-- Testimonial 4 - Graphic Design & Branding -->
         <div class="testimonial-card">
-          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #34d399, #059669);">MV</div>
+          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #34d399, #059669);">LC</div>
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Their execution is flawless. They delivered our custom web platform weeks ahead of schedule and with incredible attention to detail. Highly recommend!"</p>
+          <p class="testimonial-text">"MetaNova designed our complete brand identity—logo, color scheme, and marketing materials. The new look perfectly represents our company and has been well-received by clients."</p>
           <div class="testimonial-author">
-            <span class="author-name">Marcus Vance</span>
-            <span class="author-title">VP of Engineering at Nexus</span>
+            <span class="author-name">Lisa Chen</span>
+            <span class="author-title">CEO at Nova Wellness Co.</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 - UI/UX Design -->
+        <div class="testimonial-card">
+          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">MR</div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"The UI/UX design for our mobile app made a huge difference. User feedback has been overwhelmingly positive, and app abandonment dropped by 18% after the redesign."</p>
+          <div class="testimonial-author">
+            <span class="author-name">Michael Rodriguez</span>
+            <span class="author-title">Product Lead at FitTrack Pro</span>
           </div>
         </div>
 
         <!-- DUPLICATE SET FOR INFINITE LOOPING -->
         <!-- Testimonial 1 Duplicate -->
         <div class="testimonial-card">
-          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #a78bfa, #6d28d9);">SN</div>
+          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #a78bfa, #6d28d9);">AK</div>
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"From wireframes to launch, the process was seamless. Their team brought our custom web solution to life and our clients love the clean, intuitive interface."</p>
+          <p class="testimonial-text">"MetaNova Tech built our corporate website from scratch. The design is professional, and the site loads incredibly fast. We've seen a 25% increase in online inquiries since launch."</p>
           <div class="testimonial-author">
-            <span class="author-name">Sophia Nguyen</span>
-            <span class="author-title">Founder of Clarity App</span>
+            <span class="author-name">Amit Kapoor</span>
+            <span class="author-title">Managing Director at Apex Solutions</span>
           </div>
         </div>
 
         <!-- Testimonial 2 Duplicate -->
         <div class="testimonial-card">
-          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #60a5fa, #2563eb);">ER</div>
+          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #60a5fa, #2563eb);">SM</div>
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"The website they delivered exceeded our expectations: fast, responsive, and beautifully designed. It's become our primary tool for daily marketing and client acquisition."</p>
+          <p class="testimonial-text">"We worked with MetaNova on SEO for our e-commerce store. Within three months, we moved from page 3 to the first page of Google for our main keywords, and organic sales are up 40%."</p>
           <div class="testimonial-author">
-            <span class="author-name">Emily R.</span>
-            <span class="author-title">Product Manager at GrowthBase</span>
+            <span class="author-name">Sarah Mitchell</span>
+            <span class="author-title">Owner of GreenLeaf Organics</span>
           </div>
         </div>
 
         <!-- Testimonial 3 Duplicate -->
         <div class="testimonial-card">
-          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f472b6, #db2777);">RM</div>
+          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f472b6, #db2777);">DP</div>
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"We needed a partner who understood both design and performance. They nailed it. Our site's speed optimization and UI clarity have dramatically improved our conversion rates."</p>
+          <p class="testimonial-text">"Their social media team transformed our Instagram presence. Consistent, high-quality content increased our follower count by 1,200 in six months and boosted in-store visits."</p>
           <div class="testimonial-author">
-            <span class="author-name">Raj Malhotra</span>
-            <span class="author-title">CTO at LedgerTech</span>
+            <span class="author-name">David Park</span>
+            <span class="author-title">Founder of Urban Brew Café</span>
           </div>
         </div>
 
         <!-- Testimonial 4 Duplicate -->
         <div class="testimonial-card">
-          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #34d399, #059669);">MV</div>
+          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #34d399, #059669);">LC</div>
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Their execution is flawless. They delivered our custom web platform weeks ahead of schedule and with incredible attention to detail. Highly recommend!"</p>
+          <p class="testimonial-text">"MetaNova designed our complete brand identity—logo, color scheme, and marketing materials. The new look perfectly represents our company and has been well-received by clients."</p>
           <div class="testimonial-author">
-            <span class="author-name">Marcus Vance</span>
-            <span class="author-title">VP of Engineering at Nexus</span>
+            <span class="author-name">Lisa Chen</span>
+            <span class="author-title">CEO at Nova Wellness Co.</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 Duplicate -->
+        <div class="testimonial-card">
+          <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">MR</div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"The UI/UX design for our mobile app made a huge difference. User feedback has been overwhelmingly positive, and app abandonment dropped by 18% after the redesign."</p>
+          <div class="testimonial-author">
+            <span class="author-name">Michael Rodriguez</span>
+            <span class="author-title">Product Lead at FitTrack Pro</span>
           </div>
         </div>
       </div>
@@ -381,107 +978,68 @@
       </div>
 
       <div class="faq-list">
-        <!-- Item 1 (Open by default) -->
+        <!-- Item 1 - Website Development (Open by default) -->
         <details class="faq-item" open id="faq-item-1">
           <summary>
-            <span><span class="faq-number">1.</span> What kind of businesses do you work with?</span>
+            <span><span class="faq-number">1.</span> What website development services do you provide?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </summary>
           <div class="faq-answer">
-            <p>We collaborate with startups, small-to-medium businesses, e-commerce brands, personal brands, and corporate companies. Whether you are launching a new venture or scaling up your web presence, we're ready to help.</p>
+            <p>We build custom, high-performance websites tailored to your business goals. This includes corporate websites, e-commerce storefronts, landing pages, and portfolio sites, all optimized for speed, mobile responsiveness, and conversion.</p>
           </div>
         </details>
 
-        <!-- Item 2 -->
+        <!-- Item 2 - SEO -->
         <details class="faq-item" id="faq-item-2">
           <summary>
-            <span><span class="faq-number">2.</span> What digital agency services do you offer?</span>
+            <span><span class="faq-number">2.</span> How can SEO help grow my business online?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </summary>
           <div class="faq-answer">
-            <p>We provide full-service digital solutions including custom website development, corporate websites, portfolio websites, landing pages, e-commerce storefronts, search engine optimization (SEO), social media management, graphic design, and modern UI/UX design.</p>
+            <p>Our SEO services improve your search engine rankings through keyword optimization, technical SEO audits, content strategy, and backlink building. This increases organic visibility, drives qualified traffic to your site, and generates more leads over time.</p>
           </div>
         </details>
 
-        <!-- Item 3 -->
+        <!-- Item 3 - Social Media Management -->
         <details class="faq-item" id="faq-item-3">
           <summary>
-            <span><span class="faq-number">3.</span> How does the website design and development process work?</span>
+            <span><span class="faq-number">3.</span> What does your social media management include?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </summary>
           <div class="faq-answer">
-            <p>Our process starts with Discovery & Consultation to align on requirements, followed by Strategy & Planning. Next, we design custom UI/UX mockups, develop the website using high-performance tech stacks, and finally conduct rigorous testing before Launch & Growth support.</p>
+            <p>We create and execute tailored social media strategies for platforms like Instagram, LinkedIn, and Facebook. This includes content creation, post scheduling, audience engagement, and performance reporting to build brand awareness and connect with your target audience.</p>
           </div>
         </details>
 
-        <!-- Item 4 -->
+        <!-- Item 4 - Graphic Design -->
         <details class="faq-item" id="faq-item-4">
           <summary>
-            <span><span class="faq-number">4.</span> Do you integrate websites with third-party systems?</span>
+            <span><span class="faq-number">4.</span> What graphic design solutions do you offer?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </summary>
           <div class="faq-answer">
-            <p>Yes, we build seamless integrations with major third-party platforms such as Stripe, PayPal, Salesforce, HubSpot, Mailchimp, custom databases, and external APIs to automate and streamline your operations.</p>
+            <p>We provide comprehensive graphic design services including brand identity (logos, color schemes), marketing collateral (brochures, flyers), social media graphics, packaging design, and print materials that align with your brand's professional tone.</p>
           </div>
         </details>
 
-        <!-- Item 5 -->
+        <!-- Item 5 - UI/UX Design -->
         <details class="faq-item" id="faq-item-5">
           <summary>
-            <span><span class="faq-number">5.</span> Do you provide ongoing maintenance and technical support?</span>
+            <span><span class="faq-number">5.</span> How does UI/UX design improve my product?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </summary>
           <div class="faq-answer">
-            <p>Absolutely. We offer comprehensive support packages that cover monthly security patches, speed optimization, CMS updates, regular backups, and content modifications to keep your website running at peak performance.</p>
-          </div>
-        </details>
-
-        <!-- Item 6 -->
-        <details class="faq-item" id="faq-item-6">
-          <summary>
-            <span><span class="faq-number">6.</span> How long does it take to design and launch a website?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </summary>
-          <div class="faq-answer">
-            <p>Timelines depend on the scale of the project. A custom landing page typically takes 1 to 2 weeks, a standard business website takes 3 to 4 weeks, and complex corporate portals or e-commerce platforms take 6 to 8 weeks.</p>
-          </div>
-        </details>
-
-        <!-- Item 7 -->
-        <details class="faq-item" id="faq-item-7">
-          <summary>
-            <span><span class="faq-number">7.</span> Will my website be mobile-friendly and optimized for Google SEO?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </summary>
-          <div class="faq-answer">
-            <p>Yes, every single layout we develop is fully responsive and mobile-friendly. Additionally, we integrate on-page SEO best practices (semantic HTML, fast load times, alt text, and meta tags) to help you rank on search engines.</p>
-          </div>
-        </details>
-
-        <!-- Item 8 -->
-        <details class="faq-item" id="faq-item-8">
-          <summary>
-            <span><span class="faq-number">8.</span> What pricing packages do you offer?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </summary>
-          <div class="faq-answer">
-            <p>We offer tailored plans: our Starter package begins at $199, Professional package at $499, and the Business package at $999. Custom pricing is also available for enterprise-level or complex custom web applications.</p>
+            <p>Our UI/UX design process focuses on creating intuitive, user-centered interfaces. We conduct user research, create wireframes and prototypes, and refine designs to improve usability, enhance user satisfaction, and increase conversion rates for your digital products.</p>
           </div>
         </details>
       </div>
@@ -498,7 +1056,7 @@
 
         <h2>Let's Build Something Great Together</h2>
         <p>Whether you're launching a startup or upgrading legacy tech, we're here to help.</p>
-        <button class="btn btn-primary" id="cta-box-button">Schedule Your Free Discovery Call</button>
+        <a href="contact.html" class="btn btn-primary" id="cta-box-button">Book Now</a>
       </div>
     </div>
   </section>
@@ -507,8 +1065,9 @@
   <footer>
     <div class="container">
       <div class="footer-top">
-        <a href="#" class="logo" id="footer-logo">
+        <a href="#" class="footer-logo" id="footer-logo">
                     <img src="metanova logo.png" alt="Metanova Logo">
+                    <p>Metanova Tech</p>
         </a>
         <div class="social-links">
           <!-- Twitter/X -->
@@ -602,56 +1161,6 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-      const navMenu = document.getElementById('nav-menu');
-      const navLinks = document.querySelectorAll('.nav-link');
-
-      // Toggle Mobile Menu
-      mobileMenuToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        mobileMenuToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        document.body.classList.toggle('no-scroll');
-      });
-
-      // Close Menu when clicking a Nav Link
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenuToggle.classList.remove('active');
-          navMenu.classList.remove('active');
-          document.body.classList.remove('no-scroll');
-
-          // Toggle active link visual class
-          navLinks.forEach(l => l.classList.remove('active'));
-          link.classList.add('active');
-        });
-      });
-
-      // Close Menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-          mobileMenuToggle.classList.remove('active');
-          navMenu.classList.remove('active');
-          document.body.classList.remove('no-scroll');
-        }
-      });
-
-      // FAQ Accordion - Close others when one is opened
-      const faqItems = document.querySelectorAll('.faq-item');
-      faqItems.forEach(item => {
-        item.addEventListener('toggle', () => {
-          if (item.open) {
-            faqItems.forEach(otherItem => {
-              if (otherItem !== item) {
-                otherItem.removeAttribute('open');
-               }
-            });
-          }
-        });
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
