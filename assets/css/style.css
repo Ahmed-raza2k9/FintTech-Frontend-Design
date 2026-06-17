@@ -1,5 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
 
+/* Animated Cursor Styles */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--accent-purple);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease-out, opacity 0.3s ease-out;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-follower {
+  width: 40px;
+  height: 40px;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(2px);
+}
+
+.cursor.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  background: rgba(124, 58, 237, 0.2);
+  border-color: var(--accent-purple-light);
+}
+
+.cursor-follower.hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  background: rgba(124, 58, 237, 0.15);
+}
+
+@media (max-width: 768px) {
+  .cursor,
+  .cursor-follower {
+    display: none;
+  }
+}
+
 :root {
   /* Colors */
   --bg-color: #05020c;
