@@ -400,21 +400,19 @@ button,
   height: 2.5px;
   background-color: #ffffff;
   border-radius: 2px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: center;
 }
 
 .menu-toggle.active .menu-icon span:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .menu-toggle.active .menu-icon span:nth-child(2) {
-  opacity: 0;
-  transform: scaleX(0);
+  display: none;
 }
 
 .menu-toggle.active .menu-icon span:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 body.no-scroll {
@@ -446,6 +444,17 @@ body.no-scroll {
   .menu-toggle {
     display: block;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 6px;
+  }
+
+  .menu-icon {
+    width: 24px;
+    height: 18px;
+  }
+
+  .menu-icon span {
+    height: 2px;
+    transition: none;
   }
 
   .menu-toggle:hover {
@@ -507,13 +516,13 @@ body.no-scroll {
   }
 
   .nav-menu .nav-link {
-    padding: 12px 0;
+    padding: 8px 0;
     background: none;
     border: none;
     text-align: left;
     font-weight: 500;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     position: relative;
     overflow: hidden;
     text-decoration: none;
@@ -542,21 +551,7 @@ body.no-scroll {
   .nav-menu.active .nav-link:nth-child(3) { transition-delay: 0.45s; }
   .nav-menu.active .nav-link:nth-child(4) { transition-delay: 0.6s; }
 
-  .nav-menu .nav-link::after {
-    content: '→';
-    font-size: 18px;
-    opacity: 0.7;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
 
-  .nav-menu .nav-link:hover::after {
-    transform: translateY(-50%) translateX(8px);
-    opacity: 1;
-  }
 }
 
 .btn-ghost {
