@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@300;400;500;600;700;800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 /* Animated Cursor Styles */
 .cursor {
@@ -69,8 +69,8 @@
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 
   /* Typography */
-  --font-headings: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-headings: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif ;
 
   /* Spacing */
   --container-width: 1200px;
@@ -90,7 +90,7 @@ html {
 body {
   background-color: var(--bg-color);
   color: #ffffff;
-  font-family: var(--font-body);
+  font-family: var(--font-body) !important;
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
@@ -191,6 +191,7 @@ button,
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Montserrat !important;
 }
 
 .nav-container {
@@ -239,6 +240,7 @@ button,
 
 .logo-img {
   width: auto;
+  width: 200px;
   height: 70px;
   object-fit: contain;
   transition: all 0.3s ease;
@@ -248,8 +250,8 @@ button,
 .nav-menu {
   display: flex;
   flex-direction: row;
-  gap: 40px;
-  margin-left: 60px;
+  gap: 5px;
+  margin-left: 120px;
   margin-top: 0;
   padding: 0;
   opacity: 1;
@@ -262,9 +264,9 @@ button,
 }
 
 .nav-cta {
-  margin-left: 60px;
+  margin-left: 50px;
   font-size: 11px;
-  padding: 4px 12px;
+  padding: 4px 20px;
   white-space: nowrap;
   letter-spacing: 0.3px;
   font-weight: 600;
@@ -279,8 +281,9 @@ button,
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 50px;
-  top: 10px;
+  max-height: 40px;
+  top: 16px;
+  min-width: 120px;
 }
 
 .nav-cta::before {
@@ -442,7 +445,7 @@ body.no-scroll {
   }
 
   .nav-cta {
-    margin-left: 80px;
+    margin-left: 100px;
     margin-top: 0;
     max-width: 150px;
     opacity: 0;
@@ -455,6 +458,7 @@ body.no-scroll {
     padding: 12px 20px;
     font-size: 13px;
     top: 0;
+
   }
 
   .nav-container.nav-active .nav-cta {
@@ -1711,6 +1715,7 @@ footer {
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+  object-position: top;
 }
 
 .portfolio-item:hover .portfolio-image img {

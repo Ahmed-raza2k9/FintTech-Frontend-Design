@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function animateCursor() {
-    cursorX += (mouseX - cursorX) * 0.2;
-    cursorY += (mouseY - cursorY) * 0.2;
-    followerX += (mouseX - followerX) * 0.1;
-    followerY += (mouseY - followerY) * 0.1;
+    cursorX = mouseX;
+    cursorY = mouseY;
+    followerX += (mouseX - followerX) * 0.5;
+    followerY += (mouseY - followerY) * 0.5;
 
     cursor.style.left = cursorX + 'px';
     cursor.style.top = cursorY + 'px';
@@ -102,8 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Portfolio Tabs - only run if we have tabs on this page
   const portfolioTabs = document.querySelectorAll('.portfolio-tab');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
+  const isPortfolioPage = window.location.pathname.includes('portfolio.html');
 
-  if (portfolioTabs.length > 0 && portfolioItems.length > 0) {
+  if (isPortfolioPage && portfolioTabs.length > 0 && portfolioItems.length > 0) {
+    // Only run tab functionality on portfolio.html
     portfolioTabs.forEach(tab => {
       tab.addEventListener('click', () => {
         // Remove active class from all tabs
@@ -112,38 +114,24 @@ document.addEventListener('DOMContentLoaded', () => {
         tab.classList.add('active');
 
         const category = tab.dataset.category;
-        let counter = 0;
-        const limit = category === 'all' ? 8 : 3;
 
         portfolioItems.forEach(item => {
           item.classList.add('hidden');
           if (category === 'all') {
-            if (counter < limit) {
-              item.classList.remove('hidden');
-              counter++;
-            }
+            // On portfolio page, show all items for "all"
+            item.classList.remove('hidden');
           } else {
             if (item.dataset.category === category) {
-              if (counter < limit) {
-                item.classList.remove('hidden');
-                counter++;
-              }
+              item.classList.remove('hidden');
             }
           }
         });
       });
     });
 
-    // Initialize: show first 8 projects in "all"
-    const initialCategory = 'all';
-    let initialCounter = 0;
-    const initialLimit = 8;
+    // Initialize portfolio - show all items
     portfolioItems.forEach(item => {
-      item.classList.add('hidden');
-      if (initialCounter < initialLimit) {
-        item.classList.remove('hidden');
-        initialCounter++;
-      }
+      item.classList.remove('hidden');
     });
   }
 
