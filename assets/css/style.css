@@ -1548,8 +1548,14 @@ footer {
     margin-top: 40px;
   }
 
+  .rating-block {
+    align-items: center;
+    text-align: center;
+    min-width: auto;
+  }
+
   .divider {
-    width: 100%;
+    width: 80%;
     height: 1px;
   }
 
@@ -1602,12 +1608,12 @@ footer {
 
   .footer-grid {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
 
   .footer-links,
   .footer-contact-info {
-    align-items: center;
+    align-items: flex-start;
   }
 
   .portfolio-grid {
