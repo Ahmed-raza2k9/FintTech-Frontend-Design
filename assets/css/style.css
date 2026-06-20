@@ -1228,7 +1228,7 @@ body.no-scroll {
 /* FAQ Accordion Section */
 .faq {
   position: relative;
-  background-color: var(--bg-color);
+  background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-color-alt) 100%);
 }
 
 .faq-list {
@@ -1456,7 +1456,7 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 30px;
   margin-bottom: 30px;
 }
@@ -1464,6 +1464,10 @@ footer {
 .footer-col {
   display: flex;
   flex-direction: column;
+}
+
+.menu-footer {
+  margin-left: 50px;
 }
 
 .footer-col h4 {
@@ -1474,12 +1478,14 @@ footer {
   margin-bottom: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
+
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
   gap: 8px;
+
 }
 
 .footer-links a {
@@ -1669,6 +1675,10 @@ footer {
   .footer-links,
   .footer-contact-info {
     align-items: flex-start;
+  }
+
+  .footer-col {
+    margin-left: 0;
   }
 
   .portfolio-grid {
@@ -3434,9 +3444,11 @@ select.form-control option {
     transform: scale(0.6);
     opacity: 0;
   }
+
   70% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -3708,6 +3720,7 @@ select.form-control option {
   margin-bottom: 100px;
   position: relative;
 }
+
 .service-zigzag-item:last-child {
   margin-bottom: 0;
 }
