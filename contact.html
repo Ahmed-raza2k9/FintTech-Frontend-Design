@@ -6,6 +6,7 @@
   <title>Contact Us | Get a Free Quote – Metanova Tech, UK</title>
   <meta name="description" content="Get in touch with Metanova Tech, a UK-based digital agency. Request a free quote for website design, SEO, branding, or UI/UX — we typically respond within 2 hours.">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,12 +53,12 @@
       </div>
       <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
         <a href="index.html" class="nav-link" id="nav-home">Home</a>
+        <a href="about.html" class="nav-link" id="nav-about">About</a>
         <a href="services.html" class="nav-link" id="nav-services">Services</a>
         <a href="portfolio.html" class="nav-link" id="nav-portfolio">Portfolio</a>
-        <a href="about.html" class="nav-link" id="nav-about">About</a>
         <a href="contact.html" class="nav-link active" id="nav-contact">Contact</a>
       </nav>
-      <a href="contact.html" class="nav-cta">Get a Free Consultation</a>
+      <a href="contact.html" class="nav-cta">get a free audit</a>
     </div>
   </header>
 
@@ -125,31 +126,22 @@
           <!-- Social chips -->
           <div class="contact-socials-row">
             <a href="#" class="contact-social-chip">
-              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              Twitter / X
+              <i class="fab fa-instagram"></i>
+              Instagram
             </a>
             <a href="#" class="contact-social-chip">
-              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              LinkedIn
+              <i class="fab fa-facebook-f"></i>
+              Facebook
             </a>
             <a href="#" class="contact-social-chip">
-              <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              GitHub
+              <i class="fab fa-youtube"></i>
+              YouTube
             </a>
           </div>
         </div>
 
         <!-- Form Panel -->
         <div class="contact-form-panel">
-
-          <!-- Success state -->
-          <div class="form-success" id="form-success">
-            <div class="success-icon">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <h3>Message Sent! 🎉</h3>
-            <p>Thank you for reaching out. A member of our team will be in touch within 2 business hours.</p>
-          </div>
 
           <!-- Form -->
           <form id="contact-form" novalidate>
@@ -160,22 +152,22 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="first-name">First Name <span>*</span></label>
-                <input type="text" id="first-name" class="form-control" placeholder="John" required>
+                <input type="text" id="first-name" name="first_name" class="form-control" placeholder="John" autocomplete="given-name" required>
               </div>
               <div class="form-group">
                 <label for="last-name">Last Name <span>*</span></label>
-                <input type="text" id="last-name" class="form-control" placeholder="Doe" required>
+                <input type="text" id="last-name" name="last_name" class="form-control" placeholder="Doe" autocomplete="family-name" required>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label for="email">Work Email <span>*</span></label>
-                <input type="email" id="email" class="form-control" placeholder="john@company.com" required>
+                <input type="email" id="email" name="email" class="form-control" placeholder="john@company.com" autocomplete="email" required>
               </div>
               <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text" id="company" class="form-control" placeholder="Acme Corp">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1 234 567 8900" autocomplete="tel">
               </div>
             </div>
 
@@ -186,17 +178,18 @@
                 <span class="subject-chip selected" data-value="webdev">Website Development</span>
                 <span class="subject-chip" data-value="seo">SEO Optimization</span>
                 <span class="subject-chip" data-value="design">UI/UX &amp; Graphics</span>
+                <span class="subject-chip" data-value="branding">Branding</span>
                 <span class="subject-chip" data-value="social">Social Media</span>
-                <span class="subject-chip" data-value="partnership">Partnership</span>
+                <span class="subject-chip" data-value="video">Video Animation</span>
               </div>
-              <input type="hidden" id="subject-value" value="webdev">
+              <input type="hidden" id="subject-value" name="subject" value="webdev">
             </div>
 
 
 
             <div class="form-group">
               <label for="message">Your Message <span>*</span></label>
-              <textarea id="message" class="form-control" placeholder="Tell us about your project, goals, or any questions you have…" required></textarea>
+              <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project, goals, or any questions you have…" required></textarea>
             </div>
 
             <div class="form-submit-row">
@@ -213,29 +206,7 @@
     </div>
   </section>
 
-  <!-- Office Locations -->
-  <section class="offices-section section-padding" id="offices">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our <span>Office</span></h2>
-        <p>From our London headquarters, we serve clients across the UK, Europe, and beyond, delivering digital solutions that drive measurable business results.</p>
-      </div>
-      <div class="office-card-full">
-        <div class="office-card">
-          <span class="office-flag">UK</span>
-          <div class="office-city">London</div>
-          <span class="office-type">Headquarters</span>
-          <p class="office-description">From our London headquarters, we serve clients across the UK, Europe, and beyond, delivering digital solutions that drive measurable business results.</p>
-          <div class="office-address">
-            71-75 Shelton Street<br>
-            London, WC2H 9JQ<br>
-            United Kingdom<br>
-            <a href="tel:+447400749886">+44 7400 749886 →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Footer Section -->
   <footer>
@@ -245,34 +216,56 @@
           <a href="index.html" class="logo">
             <img src="assets/media/metanova logo.webp" alt="Metanova Logo" class="footer-logo-img">
           </a>
-          <p class="company-description">We help businesses grow online through professional website development, SEO, social media management, graphic design, and UI/UX solutions.</p>
+          <p class="company-description">We help businesses grow online through professional website development, SEO,
+            social media management, graphic design, and UI/UX solutions. Transform your digital presence with our expert team.</p>
         </div>
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h4>Our Menus</h4>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4>Our Services</h4>
           <ul class="footer-links">
             <li><a href="services.html">Website Design & Development</a></li>
-            <li><a href="services.html">SEO Services</a></li>
-            <li><a href="services.html">Social Media Management</a></li>
             <li><a href="services.html">Graphic Design & Branding</a></li>
             <li><a href="services.html">UI/UX Design</a></li>
+            <li><a href="services.html">Social Media Management</a></li>
+            <li><a href="services.html">SEO Services</a></li>
             <li><a href="services.html">Video Animation</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Connect</h4>
+          <h4>Contact</h4>
           <div class="footer-contact-info">
-            <a href="mailto:info@metanova-tech.com">info@metanova-tech.com</a>
-            <span>71-75 Shelton Street, London, WC2H 9JQ</span>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@metanova-tech.com">info@metanova-tech.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-whatsapp"></i>
+              <a href="https://wa.me/447400749886" target="_blank">+44 7400 749886</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>71-75 Shelton Street London, <br> WC2H 9JQ, United Kingdom</span>
+            </div>
+            <div class="footer-socials">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -285,33 +278,15 @@
 
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/447400749886" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20.52 3.48A11.87 11.87 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.58 5.96L0 24l6.25-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12a11.87 11.87 0 0 0-3.48-8.52zm-8.52 19a9.9 9.9 0 0 1-5.08-1.4l-.36-.21-3.74.98 1-3.63-.23-.38A9.9 9.9 0 1 1 12 22.48zm5.98-8.22c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.34-.86 1.07-1.06 1.29-.2.22-.39.24-.73.08-.34-.17-1.43-.53-2.73-1.68-1.01-.89-1.69-2-1.89-2.33-.2-.34-.02-.52.15-.69.15-.15.33-.4.5-.6.17-.2.22-.34.33-.57.11-.23.06-.43-.03-.6-.09-.17-.74-1.8-.99-2.47-.24-.65-.49-.56-.74-.57-.2-.01-.44-.01-.69-.01-.24 0-.64.09-.98.46-.33.37-1.27 1.24-1.27 3.02 0 1.78 1.3 3.5 1.48 3.74.18.24 2.54 3.88 6.15 5.43.86.37 1.54.59 2.06.75.87.28 1.66.24 2.29.15.7-.11 1.95-.8 2.23-1.58.28-.78.28-1.44.2-1.58-.08-.14-.29-.22-.62-.39z"/>
-    </svg>
+    <span class="whatsapp-float-label">Contact</span>
+    <span class="whatsapp-float-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.52 3.48A11.87 11.87 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.58 5.96L0 24l6.25-1.63A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12a11.87 11.87 0 0 0-3.48-8.52zm-8.52 19a9.9 9.9 0 0 1-5.08-1.4l-.36-.21-3.74.98 1-3.63-.23-.38A9.9 9.9 0 1 1 12 22.48zm5.98-8.22c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.34-.86 1.07-1.06 1.29-.2.22-.39.24-.73.08-.34-.17-1.43-.53-2.73-1.68-1.01-.89-1.69-2-1.89-2.33-.2-.34-.02-.52.15-.69.15-.15.33-.4.5-.6.17-.2.22-.34.33-.57.11-.23.06-.43-.03-.6-.09-.17-.74-1.8-.99-2.47-.24-.65-.49-.56-.74-.57-.2-.01-.44-.01-.69-.01-.24 0-.64.09-.98.46-.33.37-1.27 1.24-1.27 3.02 0 1.78 1.3 3.5 1.48 3.74.18.24 2.54 3.88 6.15 5.43.86.37 1.54.59 2.06.75.87.28 1.66.24 2.29.15.7-.11 1.95-.8 2.23-1.58.28-.78.28-1.44.2-1.58-.08-.14-.29-.22-.62-.39z"/>
+      </svg>
+    </span>
   </a>
   
   <script src="assets/js/script.js"></script>
-  <script>
-    // Subject chip selection
-    document.querySelectorAll('.subject-chip').forEach(chip => {
-      chip.addEventListener('click', () => {
-        document.querySelectorAll('.subject-chip').forEach(c => c.classList.remove('selected'));
-        chip.classList.add('selected');
-        document.getElementById('subject-value').value = chip.dataset.value;
-      });
-    });
-
-    // Form submission
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const btn = document.getElementById('submit-btn');
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-      setTimeout(() => {
-        document.getElementById('contact-form').style.display = 'none';
-        document.getElementById('form-success').classList.add('show');
-      }, 1400);
-    });
-  </script>
+  <script src="assets/js/forms.js"></script>
 </body>
 </html>
