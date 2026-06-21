@@ -9,6 +9,7 @@
     content="Metanova Tech is a UK-based digital agency helping businesses grow online through website design & development, SEO, social media management, graphic design, and UI/UX solutions.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -57,13 +58,13 @@
         </button>
       </div>
       <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
-        <a href="/" class="nav-link active" id="nav-home">Home</a>
-        <a href="/about" class="nav-link" id="nav-about">About</a>
-        <a href="/services" class="nav-link" id="nav-services">Services</a>
-        <a href="/portfolio" class="nav-link" id="nav-portfolio">Portfolio</a>
-        <a href="/contact" class="nav-link" id="nav-contact">Contact</a>
+        <a href="index.html" class="nav-link active" id="nav-home">Home</a>
+        <a href="about.html" class="nav-link" id="nav-about">About</a>
+        <a href="services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="portfolio.html" class="nav-link" id="nav-portfolio">Portfolio</a>
+        <a href="#contact-main" class="nav-link" id="nav-contact">Contact</a>
       </nav>
-      <a href="contact.html" class="nav-cta">Get a Free Audit</a>
+      <a href="#contact-main" class="nav-cta">Get a Free Audit</a>
     </div>
   </header>
 
@@ -74,18 +75,18 @@
     <div class="hero-arch-inner"></div>
 
     <div class="container">
-      <div class="hero-content">
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
         <h1 class="hero-title">Transforming Ideas Into<br>Powerful Digital Experiences</h1>
         <p class="hero-subtitle">Metanova Tech is a UK-based digital agency delivering web development, SEO, branding,
           social media, and UI/UX solutions that help businesses grow and succeed online.</p>
         <div class="hero-ctas">
-          <a href="contact.html" class="btn btn-primary" id="hero-cta-consult">Get a Free Consultation</a>
-          <a href="index.html#services-section" class="btn btn-ghost" id="hero-cta-work">View Our Services</a>
+          <a href="#contact-main" class="btn btn-primary" id="hero-cta-consult">Get a Free Consultation</a>
+          <a href="#services-section" class="btn btn-ghost" id="hero-cta-work">View Our Services</a>
         </div>
       </div>
 
       <!-- Trust Rating Bar -->
-      <div class="trust-bar" id="trust-rating-bar">
+      <div class="trust-bar" id="trust-rating-bar" data-aos="fade-up" data-aos-delay="150">
         <div class="rating-block">
           <div class="rating-number">100+</div>
           <div class="rating-text">Projects Completed</div>
@@ -118,14 +119,14 @@
   <!-- Services Grid Section -->
   <section class="services section-padding" id="services-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up">
         <h2>Our Services. <span>Your Growth.</span></h2>
         <p>Comprehensive digital solutions tailored to help your business succeed online — from your first impression to
           long-term search visibility.</p>
       </div>
       <div class="services-grid">
         <!-- Card 1 -->
-        <div class="service-card" id="service-website">
+        <div class="service-card" id="service-website" data-aos="fade-up" data-aos-delay="0">
           <div class="card-icon-wrapper">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -138,10 +139,13 @@
           <h3>Website Design & Development</h3>
           <p>Custom, responsive, high-performance websites built around your business goals and brand identity — not
             templates.</p>
+          <div class="service-card-overlay">
+            <a href="services.html">View More</a>
+          </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="service-card" id="service-seo">
+        <div class="service-card" id="service-seo" data-aos="fade-up" data-aos-delay="100">
           <div class="card-icon-wrapper">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -153,10 +157,13 @@
           <h3>Search Engine Optimization (SEO)</h3>
           <p>Data-driven SEO strategies that improve your Google rankings, increase organic traffic, and turn visitors
             into customers.</p>
+          <div class="service-card-overlay">
+            <a href="services.html">View More</a>
+          </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="service-card" id="service-social">
+        <div class="service-card" id="service-social" data-aos="fade-up" data-aos-delay="200">
           <div class="card-icon-wrapper">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -167,10 +174,13 @@
           <h3>Social Media Management & Posting</h3>
           <p>Consistent, professional content and posting strategy that builds a stronger online presence across your
             key platforms.</p>
+          <div class="service-card-overlay">
+            <a href="services.html">View More</a>
+          </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="service-card" id="service-graphic">
+        <div class="service-card" id="service-graphic" data-aos="fade-up" data-aos-delay="300">
           <div class="card-icon-wrapper">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -183,10 +193,13 @@
           <h3>Graphic Design & Branding</h3>
           <p>Memorable visual identities — logos, colour systems, and brand assets — that communicate your business
             clearly and professionally.</p>
+          <div class="service-card-overlay">
+            <a href="services.html">View More</a>
+          </div>
         </div>
 
         <!-- Card 5 -->
-        <div class="service-card" id="service-ui-ux">
+        <div class="service-card" id="service-ui-ux" data-aos="fade-up" data-aos-delay="400">
           <div class="card-icon-wrapper">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -199,10 +212,13 @@
           <span class="card-arrow">↗</span>
           <h3>UI/UX Design</h3>
           <p>Intuitive, user-centred digital experiences that improve usability, engagement, and conversion rates.</p>
+          <div class="service-card-overlay">
+            <a href="services.html">View More</a>
+          </div>
         </div>
 
         <!-- Card 6 -->
-        <div class="service-card" id="service-video">
+        <div class="service-card" id="service-video" data-aos="fade-up" data-aos-delay="500">
           <div class="card-icon-wrapper">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -214,13 +230,16 @@
           <h3>Video Animation</h3>
           <p>Engaging explainer videos, motion graphics, and animated content for marketing and social media campaigns.
           </p>
+          <div class="service-card-overlay">
+            <a href="services.html">View More</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="services-zigzag section-padding" id="services-section">
+  <section class="services-zigzag section-padding" id="services-audit-section">
     <div class="container">
-      <div class="service-zigzag-item home-service-zigzag">
+      <div class="service-zigzag-item home-service-zigzag" data-aos="fade-up">
         <div class="service-zigzag-image">
           <img src="assets/media/services media/all services.png" alt="Website Design & Development">
         </div>
@@ -233,7 +252,7 @@
             <li> Personalised Video Review</li>
             <li> Actionable Recommendations</li>
             <div>
-              <a href="contact.html" class="btn btn-primary" id="cta-box-button">Get in Touch</a>
+              <a href="#contact-main" class="btn btn-primary cta-service-btn" id="cta-audit-button">Get in Touch</a>
               <p style="margin-top: 20px;">No sales pressure. Just honest, practical advice for your website.</p>
             </div>
           </ul>
@@ -244,49 +263,49 @@
   <!-- Features / Why Choose Us Section -->
   <section class="stats-section" id="stats-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up">
         <h2>Why Businesses Choose <span>Metanova Tech</span></h2>
         <p>We combine expertise, creativity, and dedication to deliver exceptional results for every client.</p>
       </div>
 
       <div class="stats-grid">
         <!-- Feature 1 -->
-        <div class="stat-card" id="feature-custom">
+        <div class="stat-card" id="feature-custom" data-aos="fade-up" data-aos-delay="0">
           <div class="stat-number">01</div>
           <div class="stat-label">Custom Solutions<br>Tailored to You</div>
           <p class="stat-description">Every project is built from scratch around your goals and brand.</p>
         </div>
 
         <!-- Feature 2 -->
-        <div class="stat-card" id="feature-design">
+        <div class="stat-card" id="feature-design" data-aos="fade-up" data-aos-delay="100">
           <div class="stat-number">02</div>
           <div class="stat-label">Modern Design<br>That Elevates</div>
           <p class="stat-description">Contemporary visuals that make your brand stand out.</p>
         </div>
 
         <!-- Feature 3 -->
-        <div class="stat-card" id="feature-seo">
+        <div class="stat-card" id="feature-seo" data-aos="fade-up" data-aos-delay="200">
           <div class="stat-number">03</div>
           <div class="stat-label">SEO-Focused<br>For Growth</div>
           <p class="stat-description">Every project is optimised from day one to rank and convert.</p>
         </div>
 
         <!-- Feature 4 -->
-        <div class="stat-card" id="feature-responsive">
+        <div class="stat-card" id="feature-responsive" data-aos="fade-up" data-aos-delay="300">
           <div class="stat-number">04</div>
           <div class="stat-label">Responsive<br>Experience</div>
           <p class="stat-description">Flawless performance across desktop, tablet, and mobile.</p>
         </div>
 
         <!-- Feature 5 -->
-        <div class="stat-card" id="feature-fast">
+        <div class="stat-card" id="feature-fast" data-aos="fade-up" data-aos-delay="400">
           <div class="stat-number">05</div>
           <div class="stat-label">Fast, On-Time<br>Delivery</div>
           <p class="stat-description">High-quality work delivered within agreed timelines.</p>
         </div>
 
         <!-- Feature 6 -->
-        <div class="stat-card" id="feature-support">
+        <div class="stat-card" id="feature-support" data-aos="fade-up" data-aos-delay="500">
           <div class="stat-number">06</div>
           <div class="stat-label">Ongoing<br>Support</div>
           <p class="stat-description">Our relationship continues well beyond launch.</p>
@@ -298,13 +317,13 @@
   <!-- Portfolio Section -->
   <section class="portfolio section-padding" id="portfolio-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up">
         <h2>Our Portfolio. <span>Real Work.</span></h2>
         <p>Showcase of our strongest projects across websites, branding, UI/UX, and social media.</p>
       </div>
 
       <!-- Portfolio Grid -->
-      <div class="portfolio-grid">
+      <div class="portfolio-grid" data-aos="fade-up" data-aos-delay="100">
         <!-- Website Design Cards -->
         <div class="portfolio-item">
           <div class="portfolio-image">
@@ -400,7 +419,7 @@
           </div>
         </div>
       </div>
-      <div class="portfolio-view-more" style="text-align: center; margin-top: 40px;">
+      <div class="portfolio-view-more" style="text-align: center; margin-top: 40px;" data-aos="fade-up" data-aos-delay="200">
         <a href="portfolio.html" class="btn btn-primary">View More Projects</a>
       </div>
     </div>
@@ -413,12 +432,12 @@
   <!-- FAQ Section -->
   <section class="faq section-padding" id="faq-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up">
         <h2>Frequently Asked Questions</h2>
         <p>Quick answers to common questions about our services and how we help businesses grow online.</p>
       </div>
 
-      <div class="faq-list">
+      <div class="faq-list" data-aos="fade-up" data-aos-delay="100">
         <!-- Item 1 - Website Development (Open by default) -->
         <details class="faq-item" open id="faq-item-1">
           <summary>
@@ -495,14 +514,14 @@
       </div>
     </div>
   </section>
-  <section class="contact-section section-padding" style="padding-top:20px;" id="contact-main">
+  <section class="contact-section section-padding" id="contact-main">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up">
         <h2>Contact <span>Us</span></h2>
         <p>Whether you're ready to start a project, want a custom quote, or just have a question — our team typically
           responds within 2 hours.</p>
       </div>
-      <div class="contact-grid">
+      <div class="contact-grid" data-aos="fade-up" data-aos-delay="100">
 
         <!-- Info Panel -->
         <div class="contact-info-panel">
@@ -561,17 +580,17 @@
 
           <!-- Social chips -->
           <div class="contact-socials-row">
-            <a href="#" class="contact-social-chip">
+            <a href="https://www.instagram.com/meta_novatech/" target="_blank" rel="noopener noreferrer" class="contact-social-chip">
               <i class="fab fa-instagram"></i>
               Instagram
             </a>
-            <a href="#" class="contact-social-chip">
+            <a href="https://www.facebook.com/metanovatech/" target="_blank" rel="noopener noreferrer" class="contact-social-chip">
               <i class="fab fa-facebook-f"></i>
               Facebook
             </a>
-            <a href="#" class="contact-social-chip">
-              <i class="fab fa-youtube"></i>
-              YouTube
+            <a href="https://wa.me/447400749886" target="_blank" rel="noopener noreferrer" class="contact-social-chip">
+              <i class="fab fa-whatsapp"></i>
+               Whatsapp
             </a>
           </div>
         </div>
@@ -654,7 +673,7 @@
   <!-- Testimonials Section -->
   <section class="testimonials section-padding" id="testimonials-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up">
         <h2>Trusted by Innovators <br><span>(Client Testimonials)</span></h2>
       </div>
     </div>
@@ -731,17 +750,17 @@
     </div>
   </section>
   <!-- Bottom CTA Box Section -->
-  <section class="cta-section section-padding" id="cta-section">
+  <section class="cta-section section-padding" style="padding-top:0;" id="cta-section">
     <div class="container">
-      <div class="cta-box">
+      <div class="cta-box" data-aos="fade-up">
         <!-- Glowing arch inside CTA box -->
         <div class="cta-box-glow-arch-outer"></div>
         <div class="cta-box-glow-arch-inner"></div>
 
-        <h2>Ready to Take Your Business to the Next Level?</h2>
+        <h2>Ready to Take Your Business <br> to the Next Level?</h2>
         <p>Whether you're launching a new business or improving an existing website, we're here to help you stand out
           online with modern digital solutions.</p>
-        <a href="contact.html" class="btn btn-primary" id="cta-box-button">Get in Touch</a>
+        <a href="#contact-main" class="btn btn-primary" id="cta-box-button">Get in Touch</a>
       </div>
     </div>
   </section>
@@ -761,22 +780,22 @@
         <div class="footer-col menu-footer">
           <h4>Our Menus</h4>
           <ul class="footer-links">
-            <li><a href="/index">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="#contact-main">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Our Services</h4>
           <ul class="footer-links">
-            <li><a href="/services">Website Design & Development</a></li>
-            <li><a href="/services">Graphic Design & Branding</a></li>
-            <li><a href="/services">UI/UX Design</a></li>
-            <li><a href="/services">Social Media Management</a></li>
-            <li><a href="/services">SEO Services</a></li>
-            <li><a href="/services">Video Animation</a></li>
+            <li><a href="services.html">Website Design & Development</a></li>
+            <li><a href="services.html">Graphic Design & Branding</a></li>
+            <li><a href="services.html">UI/UX Design</a></li>
+            <li><a href="services.html">Social Media Management</a></li>
+            <li><a href="services.html">SEO Services</a></li>
+            <li><a href="services.html">Video Animation</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -795,13 +814,13 @@
               <span>71-75 Shelton Street London, <br> WC2H 9JQ, United Kingdom</span>
             </div>
             <div class="footer-socials">
-              <a href="#" class="social-link" aria-label="Facebook">
+              <a href="https://www.facebook.com/metanovatech/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#" class="social-link" aria-label="Instagram">
+              <a href="https://www.instagram.com/meta_novatech/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="https://wa.me/447400749886" class="social-link" aria-label="YouTube">
+              <a href="https://wa.me/447400749886" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="whatsapp">
                 <i class="fab fa-whatsapp"></i>
               </a>
             </div>
@@ -826,6 +845,8 @@
 
   <script src="assets/js/script.js"></script>
   <script src="assets/js/forms.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/aos-init.js"></script>
 </body>
 
 </html>

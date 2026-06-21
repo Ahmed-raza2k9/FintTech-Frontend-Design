@@ -83,6 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('no-scroll');
       }
     });
+
+    // Close menu when clicking in-page anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', () => {
+        mobileMenuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        navContainer.classList.remove('nav-active');
+        document.body.classList.remove('no-scroll');
+      });
+    });
   }
 
   // FAQ Accordion - Close others when one is opened

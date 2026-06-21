@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Portfolio | Web Design, Branding & UI/UX Projects – Metanova Tech</title>
-  <meta name="description"
-    content="Browse Metanova Tech's portfolio of website design, SEO, social media, branding, UI/UX, and logo design projects delivered for clients across multiple industries.">
+  <meta name="description" content="Browse Metanova Tech's portfolio of website design, SEO, social media, branding, UI/UX, and logo design projects delivered for clients across multiple industries.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-
 <body>
 
   <div class="bg-glow-container" style="position:fixed;">
@@ -36,11 +34,11 @@
         </button>
       </div>
       <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
-        <a href="/" class="nav-link active" id="nav-home">Home</a>
-        <a href="/about" class="nav-link" id="nav-about">About</a>
-        <a href="/services" class="nav-link" id="nav-services">Services</a>
-        <a href="/portfolio" class="nav-link" id="nav-portfolio">Portfolio</a>
-        <a href="/contact" class="nav-link" id="nav-contact">Contact</a> 
+        <a href="index.html" class="nav-link" id="nav-home">Home</a>
+        <a href="about.html" class="nav-link" id="nav-about">About</a>
+        <a href="services.html" class="nav-link" id="nav-services">Services</a>
+        <a href="portfolio.html" class="nav-link active" id="nav-portfolio">Portfolio</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
       </nav>
       <a href="contact.html" class="nav-cta">get a free audit</a>
     </div>
@@ -48,12 +46,11 @@
 
   <!-- Hero Section -->
   <section class="hero" id="hero-section">
-
+    
     <div class="container">
-      <div class="hero-content">
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
         <h1 class="hero-title">Our Portfolio. <span>Real Results.</span></h1>
-        <p class="hero-subtitle">Browse our complete collection of projects across website design, SEO, social media,
-          branding, UI/UX, and logo design — real work for real businesses.</p>
+        <p class="hero-subtitle">Browse our complete collection of projects across website design, SEO, social media, branding, UI/UX, and logo design — real work for real businesses.</p>
       </div>
     </div>
   </section>
@@ -61,14 +58,13 @@
   <!-- Portfolio Section -->
   <section class="portfolio section-padding" id="portfolio-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up">
         <h2>Browse by <span>Category</span></h2>
-        <p>Custom, responsive websites, scroll-stopping social graphics, user-centred interfaces, complete brand
-          identities, SEO case studies, and logo design — filter to explore our work.</p>
+        <p>Custom, responsive websites, scroll-stopping social graphics, user-centred interfaces, complete brand identities, SEO case studies, and logo design — filter to explore our work.</p>
       </div>
 
       <!-- Portfolio Tabs -->
-      <div class="portfolio-tabs">
+      <div class="portfolio-tabs" data-aos="fade-up" data-aos-delay="100">
         <button class="portfolio-tab active" data-category="all">All</button>
         <button class="portfolio-tab" data-category="website-design">Website Design</button>
         <button class="portfolio-tab" data-category="video-animation">Logo Design</button>
@@ -78,7 +74,7 @@
       </div>
 
       <!-- Portfolio Grid -->
-      <div class="portfolio-grid">
+      <div class="portfolio-grid" data-aos="fade-up" data-aos-delay="150">
         <!-- Website Design Projects -->
         <div class="portfolio-item" data-category="website-design">
           <div class="portfolio-image">
@@ -217,8 +213,7 @@
           </div>
           <div class="portfolio-info">
             <h3>Sunscreen Product Launch</h3>
-            <p>Social Media Promotion.</p>
-          </div>
+            <p>Social Media Promotion.</p>          </div>
         </div>
 
         <div class="portfolio-item" data-category="social-media">
@@ -556,29 +551,27 @@
           <a href="index.html" class="logo">
             <img src="assets/media/metanova logo.webp" alt="Metanova Logo" class="footer-logo-img">
           </a>
-          <p class="company-description">We help businesses grow online through professional website development, SEO,
-            social media management, graphic design, and UI/UX solutions. Transform your digital presence with our
-            expert team.</p>
+          <p class="company-description">We help businesses grow online through professional website development, SEO, social media management, graphic design, and UI/UX solutions. Transform your digital presence with our expert team.</p>
         </div>
-        <div class="footer-col menu-footer">
+        <div class="footer-col">
           <h4>Our Menus</h4>
           <ul class="footer-links">
-            <li><a href="/index">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Our Services</h4>
           <ul class="footer-links">
-            <li><a href="/services">Website Design & Development</a></li>
-            <li><a href="/services">Graphic Design & Branding</a></li>
-            <li><a href="/services">UI/UX Design</a></li>
-            <li><a href="/services">Social Media Management</a></li>
-            <li><a href="/services">SEO Services</a></li>
-            <li><a href="/services">Video Animation</a></li>
+            <li><a href="services.html">Website Design & Development</a></li>
+            <li><a href="services.html">Graphic Design & Branding</a></li>
+            <li><a href="services.html">UI/UX Design</a></li>
+            <li><a href="services.html">Social Media Management</a></li>
+            <li><a href="services.html">SEO Services</a></li>
+            <li><a href="services.html">Video Animation</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -589,7 +582,7 @@
               <a href="mailto:info@metanova-tech.com">info@metanova-tech.com</a>
             </div>
             <div class="contact-item">
-              <i class="fas fa-phone"></i>
+              <i class="fab fa-whatsapp"></i>
               <a href="https://wa.me/447400749886" target="_blank">+44 7400 749886</a>
             </div>
             <div class="contact-item">
@@ -597,14 +590,14 @@
               <span>71-75 Shelton Street London, <br> WC2H 9JQ, United Kingdom</span>
             </div>
             <div class="footer-socials">
-              <a href="#" class="social-link" aria-label="Facebook">
+              <a href="https://www.facebook.com/metanovatech/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#" class="social-link" aria-label="Instagram">
+              <a href="https://www.instagram.com/meta_novatech/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="https://wa.me/447400749886" class="social-link" aria-label="YouTube">
-                <i class="fab fa-whatsapp"></i>
+              <a href="#" class="social-link" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
               </a>
             </div>
           </div>
@@ -616,6 +609,7 @@
       </div>
     </div>
   </footer>
+
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox">
     <div class="lightbox-content">
@@ -626,6 +620,7 @@
   </div>
 
   <script src="assets/js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/aos-init.js"></script>
 </body>
-
 </html>

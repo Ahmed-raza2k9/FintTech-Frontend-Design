@@ -141,6 +141,64 @@
     if (alertEl) alertEl.hidden = true;
   }
 
+  let successTimeoutId = null;
+
+  function hideFormSuccess(form) {
+    const panel = form.closest('.contact-form-panel') || form.parentElement;
+    const successEl = panel?.querySelector('.form-success-banner');
+    if (successEl) successEl.classList.remove('show');
+    if (successTimeoutId) {
+      clearTimeout(successTimeoutId);
+      successTimeoutId = null;
+    }
+  }
+
+  function showFormSuccess(form) {
+    const panel = form.closest('.contact-form-panel') || form.parentElement;
+    if (!panel) return;
+
+    hideFormSuccess(form);
+
+    let successEl = panel.querySelector('.form-success-banner');
+    if (!successEl) {
+      successEl = document.createElement('div');
+      successEl.className = 'form-success-banner';
+      successEl.setAttribute('role', 'status');
+      panel.appendChild(successEl);
+    }
+
+    successEl.innerHTML =
+      '<div class="form-success-banner-icon" aria-hidden="true">' +
+      '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>' +
+      '</div>' +
+      '<div class="form-success-banner-text">' +
+      '<strong>Message sent successfully!</strong>' +
+      '<span>We\'ll get back to you within 2 business hours.</span>' +
+      '</div>';
+
+    successEl.classList.add('show');
+    form.reset();
+
+    const defaultChip = form.querySelector('.subject-chip[data-value="webdev"]');
+    form.querySelectorAll('.subject-chip').forEach(function (chip) {
+      chip.classList.remove('selected');
+    });
+    if (defaultChip) {
+      defaultChip.classList.add('selected');
+      const hiddenInput = form.querySelector('#subject-value');
+      if (hiddenInput) hiddenInput.value = 'webdev';
+    }
+
+    form.querySelectorAll('#first-name, #last-name, #email, #phone, #message').forEach(function (input) {
+      clearFieldError(input);
+    });
+
+    successTimeoutId = setTimeout(function () {
+      successEl.classList.remove('show');
+      successTimeoutId = null;
+    }, 6000);
+  }
+
   async function submitToWeb3Forms(form) {
     const subjectValue = form.querySelector('#subject-value')?.value || 'general';
     const subjectLabel = SUBJECT_LABELS[subjectValue] || subjectValue;
@@ -221,6 +279,7 @@
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
       hideFormError(form);
+      hideFormSuccess(form);
 
       if (!validateForm(form)) return;
 
@@ -229,7 +288,8 @@
 
       try {
         await submitToWeb3Forms(form);
-        window.location.href = 'success.html';
+        setSubmitLoading(btn, false);
+        showFormSuccess(form);
       } catch (err) {
         setSubmitLoading(btn, false);
         showFormError(form, err.message || 'Failed to send message. Please try again later.');
