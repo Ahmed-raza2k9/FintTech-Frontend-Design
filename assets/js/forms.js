@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  const WEB3FORMS_ACCESS_KEY = '635617fa-bdb3-4ae4-b187-612ebdee417c';
+  const WEB3FORMS_ACCESS_KEY = '344268a8-a3a4-4d0e-b4b4-cd08c0f26a5e';
   const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
   const SUBJECT_LABELS = {
